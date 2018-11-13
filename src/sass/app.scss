@@ -1,0 +1,59 @@
+// variables,mixins,extends
+@import "global/helpers/helpers_all";
+@import "global/helpers/_custom-mixin.scss";
+@import "global/helpers/_family.scss";
+//normalize
+@import "global/normalize";
+
+// grid
+@import "global/grid/v4/bootstrap-grid.scss";
+
+//plugins
+@import "plugins/swiper";
+@import "plugins/slick";
+@import "plugins/slick-theme";
+@import "plugins/sumoselect";
+
+// globals
+@import "global/global";
+@import "global/header";
+@import "global/footer";
+@import "global/card";
+@import "global/car";
+@import "global/review-card";
+@import "global/discussion-card";
+@import "global/breadcrumbs";
+@import "global/pagination";
+@import "global/search";
+@import "global/modal";
+@import "global/filters";
+// sprite
+@import "sprite/sprite";
+
+//home
+@import "pages/home/home-slider";
+@import "pages/home/news";
+@import "pages/home/discussion";
+@import "pages/home/reviews";
+//discussions
+@import "pages/discussions/discussions";
+//discussions-open
+@import "pages/discussions-open/best-answer";
+//reviews
+@import "pages/reviews/top-reviews";
+//gallery
+@import "pages/car-reviews/gallery";
+@import "pages/car-reviews/gallery-point";
+@import "pages/car-reviews/review-slider";
+//web pages
+@import "pages/404/section-notfound";
+@import "pages/engines/engine-content";
+@import "pages/engine/engine-table";
+@import "pages/news-inner/content";
+@import "pages/news-inner/content";
+@import "pages/car-reviews/second-section";
+@import "pages/car-reviews/reviews-content";
+//ui
+@import "pages/ui/ui";
+//pages styles
+@import "global/helpers/pages";

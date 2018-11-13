@@ -1,0 +1,25 @@
+.discussion {
+  background: #F0F0F0;
+
+  &-top {
+    flex-direction: column;
+  }
+
+  &-bottom {
+    margin-top: 55px;
+  }
+
+  .swiper-pagination {
+    @include mq('tablet', 'max') {
+      bottom: -68px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #DCDCDC;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #4ba82e;
+  }
+}

@@ -1,0 +1,41 @@
+/* ==========================================================================
+   SECTION-NOTFOUND
+   ===========================================================================*/
+.section-notfound{
+  padding: 30px 0 120px;
+  position: relative;
+  @include mq('tablet', 'max'){
+    padding-bottom: 50px;
+  }
+
+  p {
+    margin: 0;
+    width: 100%;
+    max-width: 910px;
+    color:#000;
+    font-size:22px;
+    @include mq('tablet', 'max'){
+      text-align: center;
+      @include font-size(16px);
+    }
+    a {
+      font-family: $font-family-main;
+      font-size:22px;
+      text-transform: none;
+      @include mq('tablet', 'max'){
+        @include font-size(16px);
+      }
+    }
+  }
+  img {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    @include mq('tablet', 'max'){
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+    }
+  }
+}
+/* end section-notfound */

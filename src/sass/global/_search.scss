@@ -1,0 +1,102 @@
+.search {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .container {
+
+  }
+
+  .container-flex {
+    display: flex;
+    justify-content: space-between;
+    @include mq('laptop', 'max') {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-field {
+    display: flex;
+    max-width: 422px;
+    width: 100%;
+
+    @include mq('laptop', 'max') {
+      max-width: none;
+      height: 62px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      border: none;
+      background: #EAEAEA;
+    }
+
+    input[type=search] {
+      width: 287px;
+      padding-left: 26px;
+      padding-right: 26px;
+      font-family: $font-family-regular;
+      color: #858585;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+      @include mq('laptop', 'max') {
+        width: 100%;
+      }
+    }
+
+    input[type=submit] {
+      width: 62px;
+      //height: 62px;
+      height: 100%;
+      font-size: 0;
+      background-image:url('data:image/svg+xml,%3Csvg%20width%3D%2221%22%20height%3D%2220%22%20viewBox%3D%220%200%2021%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M14%208A6%206%200%201%201%202%208a6%206%200%200%201%2012%200zm-.88%206.148a8%208%200%201%201%201.294-1.365l.084-.085%205.888%205.888L18.972%2020l-5.852-5.852z%22%20fill%3D%22%23C1C1C1%22%2F%3E%3C%2Fsvg%3E');
+      background-size: 21px 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #EAEAEA;
+      cursor: pointer;
+    }
+
+    &:hover {
+      input {
+        background-color: darken(#eaeaea, 10%);
+      }
+    }
+  }
+
+  &-labels {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 754px;
+  }
+
+  &-labels__group {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    input {
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 2px 14px;
+      font-family: $font-family-regular;
+      font-weight: $font-weight-light;
+      font-size: 14px;
+      line-height: 1;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      border: 1px solid #61b248;
+      color: #61b248;
+    }
+
+    input:checked + label {
+      background-color: #61b248;
+      color: $color-white;
+    }
+  }
+}

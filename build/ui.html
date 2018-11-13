@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Butterfly</title>
+	<meta name="keywords" content="keywords" />
+	<meta name="description" content="description" />
+	<!--favicon-->
+	<link rel="apple-touch-icon" sizes="192x192" href="favicons/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+	<link rel="manifest" href="favicons/site.webmanifest" />
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5" />
+	<meta name="msapplication-TileColor" content="#dbe6f2" />
+	<meta name="theme-color" content="#ffffff" />
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+	<!--meta(name="viewport" content="width=device-width, initial-scale=1.0")-->
+	<!--modernizr-->
+	<script src="js/modernizr-custom.min.js"></script>
+	<!--styles-->
+	<link rel="stylesheet" type="text/css" href="css/app.css?v=1.0" />
+</head>
+
+<body>
+	<!--header-->
+	<header class="header">
+		<div class="header--desktop">
+			<div class="header-top">
+				<div class="container container-flex">
+					<a class="header-top__logo" href="./">
+						<img src="images/logo.svg" alt="Skoda" />
+					</a>
+					<div class="header-top-right">
+						<div class="header-social"><a class="header-social__link header-social__link--facebook" href="#">Facebook</a><a class="header-social__link header-social__link--instagram" href="#">Instagram</a><a class="header-social__link header-social__link--twitter" href="#">Twitter</a>
+						</div>
+						<div class="header-buttons">
+							<button class="header-buttons__login">Вход</button>
+							<button class="header-buttons__registration">Регистрация</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-bottom">
+				<div class="container container-flex">
+					<nav class="header-nav"><a class="header-nav__link" href="#">Автомобили</a><a class="header-nav__link" href="#">Новости</a><a class="header-nav__link" href="#">Обзоры</a><a class="header-nav__link" href="#">Двигатели</a><a class="header-nav__link" href="#">Фото</a><a class="header-nav__link"
+						href="#">Обсуждения</a>
+					</nav>
+					<form class="header-search">
+						<input type="search" placeholder="Поиск по публикациям" />
+						<input type="submit" placeholder="Поиск" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="header--mobile">
+			<div class="container">
+				<button class="header__btn-menu" aria-label="Меню">
+					<svg class="icon">
+						<use xlink:href="images/sprite/sprite.svg#menu-button"></use>
+					</svg>
+				</button>
+				<a class="header__logo" href="./" aria-label="Логотип Skoda">
+					<svg class="icon">
+						<use xlink:href="images/sprite/sprite.svg#footer-logo"></use>
+					</svg>
+				</a>
+				<button class="header__registration" aria-label="Кнопка регистрации">
+					<svg class="icon">
+						<use xlink:href="images/sprite/sprite.svg#person-mobile"></use>
+					</svg>
+				</button>
+				<button class="header__search" aria-label="Кнопка поиска">
+					<svg class="icon">
+						<use xlink:href="images/sprite/sprite.svg#icon-search"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</header>
+	<main class="wrapper">
+		<section class="ui-section">
+			<div class="ui-section-header">
+				<div class="ui-section__title"><span>1.</span>Typography</div>
+			</div>
+			<div class="ui-section-body clearfix">
+				<h1>h1/ 46px / Oswald</h1>
+				<h2>h2/ 35px / Oswald</h2>
+				<h3>h3/ 25px / Oswald</h3>
+				<br/>
+				<p>Раздел, посвящённый обитателям города. Героями публикаций в нём могут стать, во-первых, люди, создающие вечные ценности — инженеры, архитекторы, изобретатели, художники и проч. Во-вторых, коллективы людей, обслуживающих вечные ценности: бригады лоцманов,
+					реставраторов, строителей самолетов, трамвайных ремонтников, метростроителей и проч. В-третьих, люди и животные, которые сами являются петербургскими ценностями.</p>
+				<br/>
+				<br/><a href="#">Просто ссылка</a>
+				<!--ul-->
+				<!--    li li Пункт1-->
+				<!--    li li Пункт2-->
+				<!--    li li Пункт3-->
+				<!--    li li Пункт4-->
+				<!--    li li Пункт5-->
+				<!--    li: a(href="#") Ссылка-->
+				<br/>
+				<br/>
+				<div class="ui-title">ALL FONTS NAME</div>
+				<div class="h3" style="display: inline-block; margin-right: 30px; font-family: 'Oswald', 'Helvetica', sans-serif;">1.Oswald</div>
+				<div class="h3" style="display: inline-block; margin-right: 30px; font-family: 'Roboto', 'Times New Roman', serif;">2.Roboto'</div>
+				<!--br-->
+				<!--br-->
+				<!--.row-->
+				<!--    .col-12-->
+				<!--        .ui-title Styles text-->
+				<!--        p-->
+				<!--            b-->
+				<!--                i «Мне сказали, что надо взять интервью у Сергея Шнурова, так как он находится на пике популярности и все такое. Ну пришел ко мне Шнур. И оказался никакой, я просто был поражен этому. Ему нечего было сказать, он не отвечал на вопросы, он был пустой, неинтересный. Я не знал, что он такой. Я не хочу сказать, что он глупый. Но — он провалил это интервью!»-->
+				<!--    .col-->
+				<!--        .paragraph.short-block-->
+				<!--            p Петербург возник из небытия на глазах одного поколения, и первые полвека – с небольшим перерывом – являлся одной огромной строительной площадкой. Построить город, явить его миру как можно быстрее и тем самым доказать всем силу власти, его создавшей, – это было главной задачей строителей.-->
+				<!--            p Главная градостроительная идея Петра Первого заключалась в том, чтобы будущая столица росла вдоль берегов Невы, чтобы именно к реке был обращён городской фасад. Центр новой столицы должен был разместиться на соседнем с крепостью острове Койвисаари (Берёзовом), который вскоре переименовали в Городовой.-->
+				<!---->
+				<!--            p Здесь и появилось первое здание нашего города – домик Петра Первого.Неизвестные голландские плотники соорудили его на самом берегу Невы за три дня, с 24 по 26 мая 1703 года. В документах это скромное деревянное строение высокопарно именовалось «первоначальным дворцом» или «красными хоромами». Это уникальное сооружение – нечто среднее между русской избой и голландским домом – сохранилось до наших дней под каменным футляром.-->
+				<!--    .col-->
+				<!--        .paragraph.paragraph_red-->
+				<!--            p Кубометр воды в секунду расходуют фонтаны Петергофа. Ослепительные каскады с золочеными статуями, самсоны, раздирающие пасти львам, пирамиды, солнышки, горки и обманные шутихи – только лишь верхушка айсберга, малая часть фонтанного хозяйства. Где-то там под землей, в темных гротах и дворцовых подвалах, в закрытых и открытых коллекторах, невидимые глазу интуриста, протянулись десятки километров труб, устроены 25 накопительных резервуаров, закрываются-открываются сотни задвижек, тысячи кранов... Все это обслуживают тридцать человек: фонтанщики, инженеры и даже один научный работник. А руководит работой петергофского отдела фонтанов опытнейший специалист, инженер-строитель и просто обаятельная женщина – Нина Ивановна Ершова.-->
+				<!--    .col-->
+				<!--        div.short-block(style="padding:20px;background-color: #191919;")-->
+				<!--            p.white-->
+				<!--                i Без подобного раздела Журнал Учёта Вечных Ценностей смотрелся бы странно. Здесь происходит постоянный переучёт вокзалов, министерств, трампарков, пожарных каланчей, обсерваторий и всего прочего, из чего состоит город Санкт-Петербург. В этом же разделе пристально рассматриваются городские детали: мозаика, табличка, флагодержатель и проч. В каждом номере изучается одна отдельно взятая часть города и один совсем маленький предмет, увеличенный для удобства его рассмотрения до размеров журнальной страницы.-->
+				<!--.row-->
+				<!--    .col-12-->
+				<!--        span.caption Разное-->
+				<!--        br-->
+				<!--        br-->
+				<!--        span.caption Блог-->
+				<!--        br-->
+				<!--        br-->
+				<!--        a(href="#").caption Тема дня-->
+			</div>
+		</section>
+		<section class="ui-section">
+			<div class="ui-section-header">
+				<div class="ui-section__title"><span>2.</span>Buttons</div>
+			</div>
+			<div class="ui-section-body clearfix"><a class="btn btn_primary btn_uppercase" href="#">Подробнее об авто</a><a class="btn btn_secondary btn_uppercase" href="#">Подробнее об авто</a><a class="btn btn_primary disabled btn_uppercase" href="#">Подробнее об авто</a><a class="btn btn_secondary disabled btn_uppercase"
+				href="#">Подробнее об авто</a>
+				<!--br-->
+				<!--br-->
+				<!--div(style="background:#1b1b1b;padding: 30px; width:300px;")-->
+				<!--    a(href="#").btn.btn_light Предложить тему  номера-->
+				<!--br-->
+				<!--br-->
+				<!--div(style="background:#b40202;padding: 30px; width:280px;")-->
+				<!--    a(href="#").btn.btn_white Хочу стать распространителем-->
+				<!--    br-->
+				<!--    button(type="button").btn.btn_white-->
+				<!--        +icon('nib')-->
+				<!--        | Отправить-->
+				<!--    br-->
+				<!--    button(type="button").btn.btn_white-->
+				<!--        +icon('user')-->
+				<!--        | Войти в кабинет-->
+				<!--    a(href="#").btn.btn_white-->
+				<!--        +icon('user-add')-->
+				<!--        | Зарегистрироваться-->
+			</div>
+			<div class="ui-section-footer clearfix">
+				<p>PUG CODE:</p><pre>a(href="#").btn.btn_primary.btn_uppercase
+| Подробнее об авто</pre><pre>a(href="#").btn.btn_secondary.btn_uppercase
+| Подробнее об авто</pre><pre>a(href="#").btn.btn_primary.disabled.btn_uppercase
+| Подробнее об авто</pre><pre>a(href="#").btn.btn_secondary.disabled.btn_uppercase
+| Подробнее об авто</pre>
+				<!--//-mixin-->
+				<!--p MIXIN PUG BUTTONS:-->
+				<!--pre.-->
+				<!--    +btn-send()//Кнопка отправить-->
+				<!--    +btn-send-form()//Кнопка отправить письмо-->
+				<!--    +btn-whrite()//Кнопка Напишите нам в редакцию-->
+				<!--    +btn-login()//Кнопка войти-->
+			</div>
+		</section>
+		<section class="ui-section">
+			<div class="ui-section-header">
+				<div class="ui-section__title"><span>3.</span>Branding and Colors</div>
+			</div>
+			<div class="ui-section-body clearfix">
+				<div class="ui-title">LOGO</div>
+				<a class="ui-logo" href="#">
+					<img src="images/logo.svg" alt="logo" />
+				</a>
+				<div class="ui-title">COLORS</div>
+				<br/>
+				<div class="ui-color-list">
+					<div class="ui-color-block">
+						<div class="ui-color" data-color="1">#4BA82E;</div>
+					</div>
+					<div class="ui-color-block">
+						<div class="ui-color" data-color="2">#555555;</div>
+					</div>
+					<div class="ui-color-block">
+						<div class="ui-color" data-color="3">#232323;</div>
+					</div>
+					<div class="ui-color-block">
+						<div class="ui-color" data-color="4">#61b8fb;</div>
+					</div>
+					<div class="ui-color-block">
+						<div class="ui-color" data-color="4">#61b8fb;</div>
+					</div>
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="5") #a10311;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="6") #d00000;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="7") #af0000;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="8") #fe0000;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="9") #cc0000;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="9-2") #e60000;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="10") #000;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="11") #191919;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="12") #181818;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="13") #020202;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="14") #1b1b1b;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="15") #4b4b4b;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="16") #030303;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="17") #040404;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="17-2") #202020;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="18") #fff;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="19") #666666;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="20") #878787;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="21") #f8f8f8;-->
+					<!--.ui-color-block-->
+					<!--    .ui-color(data-color="22") green;-->
+				</div>
+			</div>
+		</section>
+		<section class="ui-section">
+			<div class="ui-section-header">
+				<div class="ui-section__title"><span>4.</span>Card</div>
+			</div>
+			<div class="ui-section-body clearfix">
+				<a class="card" href="#">
+					<div class="card-img">
+						<img src="uploads/overview-2.jpg" alt="Будущая компактная модель ŠKODA" />
+						<div class="card-desc">
+							<h2 class="card-desc__title">Будущая компактная модель ŠKODA</h2>
+							<div class="card-desc-row"><span class="card-desc__label">Инсайты</span><span class="card-desc__date">15.04.2018</span>
+							</div>
+							<p class="card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+						</div>
+					</div>
+				</a>
+				<br/>
+				<br/>
+				<a class="card card--no-img" href="#">
+					<div class="card-desc">
+						<h2 class="card-desc__title">Будущая компактная модель ŠKODA</h2>
+						<div class="card-desc-row"><span class="card-desc__label">Инсайты</span><span class="card-desc__date">15.04.2018</span>
+						</div>
+						<p class="card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, ко</p>
+					</div>
+				</a>
+				<br/>
+				<br/>
+				<a class="car" href="#">
+					<div class="car-img">
+						<img src="uploads/fabia-1.png" alt="Fabia(хЭтчбэк)" />
+					</div>
+					<div class="car-desc">
+						<h2 class="car-desc__title">Fabia(хЭтчбэк)</h2>
+						<p class="car-desc__generation">3 поколение</p>
+						<p class="car-desc__year">2018-н.в.</p>
+					</div>
+				</a>
+				<br/>
+				<br/>
+				<a class="review-card" href="#">
+					<div class="review-card-img">
+						<img src="uploads/overview-1.jpg" alt="Четырехглазая езда: тест обновленной Skoda Octavia" />
+					</div>
+					<div class="review-card-desc">
+						<h2 class="review-card-desc__title">Четырехглазая езда: тест обновленной Skoda Octavia</h2>
+						<div class="review-card-desc-row"><span class="review-card-desc__label">Обзор</span><span class="review-card-desc__date">15.04.2018</span>
+						</div>
+						<div class="review-card-desc-bottom">
+							<div class="review-card-desc-rating"><span class="review-card-rating__count">9.3</span><span class="review-card-rating__text">Рейтинг</span>
+							</div>
+							<p class="review-card-desc__mark">От редакции</p>
+						</div>
+					</div>
+				</a>
+				<br/>
+				<br/>
+				<a class="discussion-card" href="#">
+					<div class="discussion-card-meta">
+						<h2 class="discussion-card__title">Есть ли будущее у ŠKODA KODIAQ RS</h2>
+						<div class="discussion-card-buttons"><span class="discussion-card__count-comments">45</span><span class="discussion-card__count-views">5521</span>
+						</div><span class="discussion-card__label">Обсуждение</span>
+						<p class="discussion-card__comment">Лучший комментарий:</p>
+					</div>
+					<div class="discussion-card-wrap">
+						<div class="discussion-card__img">
+							<img src="uploads/user-logo.jpg" alt="Пользователь" />
+						</div>
+						<div class="discussion-card-row">
+							<p class="discussion-card__name">Константин Заруцкий</p>
+							<p class="discussion-card__time">15 часов назад</p>
+						</div>
+						<div class="discussion-card-ratings">
+							<button class="discussion-card-ratings__like">Мне нравится</button><span class="discussion-card-ratings__count">15</span>
+							<button class="discussion-card-ratings__like discussion-card-ratings__dislike">Мне не нравится</button>
+						</div>
+						<p class="discussion-card__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+					</div>
+				</a>
+			</div>
+		</section>
+		<section class="ui-section">
+			<div class="ui-section-header">
+				<div class="ui-section__title"><span>5.</span>Breadcrumbs</div>
+			</div>
+			<div class="ui-section-body clearfix">
+				<div class="breadcrumbs">
+					<div class="container">
+						<h1 class="h1">Двигатель skoda 1.4 TSI</h1>
+						<ul class="breadcrumbs-list">
+							<li><a href="#">Главная</a>
+							</li>
+							<li><a href="#">Двигатели</a>
+							</li>
+							<li><a>Двигатель Skoda 1.4 TSI</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--breadcrumbs-modif-->
+		<section class="ui-section">
+			<div class="ui-section-header">
+				<div class="ui-section__title"><span>5.</span>Breadcrumbs</div>
+			</div>
+			<div class="ui-section-body clearfix">
+				<div class="breadcrumbs">
+					<div class="container">
+						<h1 class="h1">Двигатель skoda 1.4 TSI</h1>
+						<div class="breadcrumbs-block">
+							<ul class="breadcrumbs-list">
+								<li><a href="#">Главная</a>
+								</li>
+								<li><a href="#">Двигатели</a>
+								</li>
+								<li><a>Двигатель Skoda 1.4 TSI</a>
+								</li>
+							</ul>
+							<div class="breadcrumbs-block-autor">
+								<p>От редакции</p><span>Автор:<a href="#">Андрей Кировский</a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--pagination-->
+		<section class="ui-section">
+			<div class="ui-section-header">
+				<div class="ui-section__title"><span>6.</span>Pagination</div>
+			</div>
+			<div class="ui-section-body clearfix">
+				<ul class="pagination">
+					<li>
+						<a class="prev" href="#"></a>
+					</li>
+					<li class="focus"><a href="#">1</a>
+					</li>
+					<li><a href="#">2</a>
+					</li>
+					<li><a href="#">3</a>
+					</li>
+					<li>
+						<a class="more" href="#"></a>
+					</li>
+					<li><a href="#">12</a>
+					</li>
+					<li>
+						<a class="next" href="#"></a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!--pagination-->
+		<section class="ui-section">
+			<div class="ui-section-header">
+				<div class="ui-section__title"><span>6.</span>Pagination</div>
+			</div>
+			<div class="ui-section-body clearfix">
+				<div class="search">
+					<div class="container container-flex">
+						<form class="search-field">
+							<input type="search" placeholder="Поиск по публикациям" />
+							<input type="submit" placeholder="Поиск" />
+						</form>
+						<div class="search-labels">
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="Инсайты" id="insights" />
+								<label for="insights">Инсайты</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="экстерьер" id="exterior" />
+								<label for="exterior">экстерьер</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="технологии" id="insights2" />
+								<label for="insights2">технологии</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="новинки" id="exterior2" />
+								<label for="exterior2">новинки</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="Инсайты" id="insights3" />
+								<label for="insights3">Инсайты</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="технологии" id="exterior3" />
+								<label for="exterior3">технологии</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="Инсайты" id="insights4" />
+								<label for="insights4">Инсайты</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="экстерьер" id="exterior4" />
+								<label for="exterior4">экстерьер</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="Инсайты" id="insights5" />
+								<label for="insights5">Инсайты</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="новинки" id="exterior5" />
+								<label for="exterior5">новинки</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="технологии" id="insights6" />
+								<label for="insights6">технологии</label>
+							</div>
+							<div class="search-labels__group">
+								<input type="checkbox" name="search-labels" value="экстерьер" id="exterior7" />
+								<label for="exterior7">экстерьер</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!--footer-->
+	<footer class="footer">
+		<div class="container">
+			<a class="footer-logo" href="#">
+				<svg class="icon icon-footer">
+					<use xlink:href="images/sprite/sprite.svg#footer-logo"></use>
+				</svg>
+			</a>
+			<div class="footer-nav">
+				<ul>
+					<li><a href="#">Автомобили</a>
+					</li>
+					<li><a href="#">Octavia</a>
+					</li>
+					<li><a href="#">Kodiaq</a>
+					</li>
+					<li><a href="#">Rapid</a>
+					</li>
+					<li><a href="#">Superb</a>
+					</li>
+					<li><a href="#">Fabia</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#">Новости</a>
+					</li>
+					<li><a href="#">Выставки</a>
+					</li>
+					<li><a href="#">Отзывные кампании</a>
+					</li>
+					<li><a href="#">Скандалы</a>
+					</li>
+					<li><a href="#">Новинки</a>
+					</li>
+					<li><a href="#">Первое впечатление</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#">Обзоры</a>
+					</li>
+					<li><a href="#">Топ-обзоры</a>
+					</li>
+					<li><a href="#">Обзоры на новинки</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#">Двигатели</a>
+					</li>
+					<li><a href="#">1.4 TSI DSG</a>
+					</li>
+					<li><a href="#">1.6 MPI MT</a>
+					</li>
+					<li><a href="#">2.0 TDI</a>
+					</li>
+					<li><a href="#">1.6 TDI</a>
+					</li>
+					<li><a href="#">1.6 TSI</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#">Фото</a>
+					</li>
+					<li><a href="#">Octavia</a>
+					</li>
+					<li><a href="#">Kodiaq</a>
+					</li>
+					<li><a href="#">Rapid</a>
+					</li>
+					<li><a href="#">Superb</a>
+					</li>
+					<li><a href="#">Fabia</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#">Обсуждения</a>
+					</li>
+					<li><a href="#">Популярные</a>
+					</li>
+					<li><a href="#">Новые</a>
+					</li>
+					<li><a href="#">Выбор автомобиля</a>
+					</li>
+					<li><a href="#">Обзоры</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-bottom-info">
+					<p>©2018, Skoda .info</p>
+					<p>Политика конфиденциальности</p>
+					<p>Положение об обработке персональных данных</p>
+				</div>
+				<div class="footer-bottom-social"><a href="#">Facebook<svg class="icon icon-social_footer"><use xlink:href="images/sprite/sprite.svg#icon-fb"></use></svg></a><a href="#">Instagram<svg class="icon icon-social_footer"><use xlink:href="images/sprite/sprite.svg#icon-ig"></use></svg></a>
+					<a
+					href="#">Twitter
+						<svg class="icon icon-social_footer">
+							<use xlink:href="images/sprite/sprite.svg#icon-tw"></use>
+						</svg>
+						</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--modal-sign-in-->
+	<div class="modal-popup modal-popup_signin">
+		<button class="btn-close">
+			<svg class="icon close-modal">
+				<use xlink:href="images/sprite/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="modal__title">Вход на портал</div>
+		<div class="modal__text">Выполните вход, чтобы получить возможность комментировать и участвовать в обсуждениях.</div><a class="modal__link" href="#">Нет аккаунта?</a>
+		<form class="form form-signin">
+			<div class="form-group">
+				<input class="modal__input" type="text" placeholder="Логин (E-mail)" required="required" />
+				<label>Логин(Email)</label>
+			</div>
+			<div class="form-group">
+				<input class="modal__input" type="password" placeholder="Пароль" required="required" />
+				<label>Пароль</label>
+			</div>
+			<label class="checkbox">
+				<input class="checkbox__input" type="checkbox" required="required" /><span class="checkbox__label">Запомнить меня</span>
+			</label><a class="modal__link" href="#">Забыл пароль</a>
+			<button class="btn btn_primary btn_uppercase" type="submit">Вход на портал</button>
+		</form>
+		<div class="modal__text">Войти через соц. сети:</div>
+		<div class="modal-socials">
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-fb"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-tw"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-vk"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-ok"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<!--modal-signup-->
+	<div class="modal-popup modal-popup_signup">
+		<button class="btn-close">
+			<svg class="icon close-modal">
+				<use xlink:href="images/sprite/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="modal__title">Регистрация</div>
+		<div class="modal__text">Зарегистрируйтесь, чтобы получить возможность комментировать и участвовать в обсуждениях.</div><a class="modal__link" href="#">У меня уже есть аккаунт</a>
+		<form class="form" id="form-signup">
+			<div class="form-group">
+				<input class="modal__input" type="text" name="form_name" placeholder="Логин (E-mail)" required="required" />
+				<label>Логин(Email)</label>
+			</div>
+			<div class="form-group">
+				<input class="modal__input" type="password" name="pass" placeholder="Пароль" required="required" />
+				<label>Пароль</label>
+			</div>
+			<div class="form-group">
+				<input class="modal__input" type="password" name="pass2" placeholder="Повторите пароль" required="required" />
+				<label>Повторите пароль</label>
+			</div>
+			<label class="checkbox">
+				<input class="checkbox__input" type="checkbox" required="required" /><span class="checkbox__label">Даю согласие на<a href="#"> обработку персональных данных</a></span>
+			</label>
+			<button class="btn btn_primary btn_uppercase" type="submit">Зарегистрироваться</button>
+		</form>
+		<div class="modal__text">Войти через соц. сети:</div>
+		<div class="modal-socials">
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-fb"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-tw"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-vk"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-ok"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<div class="modal-overlay"></div>
+	<div class="modal modal-menu">
+		<button class="icon-close"></button>
+		<div class="container"><a class="modal-menu__link" href="#">Автомобили</a><a class="modal-menu__link" href="#">Новости</a><a class="modal-menu__link" href="#">Обзоры</a><a class="modal-menu__link" href="#">Двигатели</a><a class="modal-menu__link" href="#">Фото</a><a class="modal-menu__link"
+			href="#">Обсуждения</a>
+		</div>
+	</div>
+	<!--jquery-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<div class="pages" id="pages-22">
+		<div class="pages-header" id="toogle-23">
+			<p>Навигация страниц верстки</p><span>GP</span><i class="icon-pages" id="close-24"></i>
+		</div>
+		<ul>
+			<li><a href="./">Главная</a>
+			</li>
+			<li><a href="cars.html">Машины</a>
+			</li>
+			<li><a href="car-reviews.html">car-reviews</a>
+			</li>
+			<li><a href="reviews.html">reviews</a>
+			</li>
+			<li><a href="discussion.html">Обсуждения</a>
+			</li>
+			<li><a href="discussion-open.html">Открытые Обсуждения</a>
+			</li>
+			<li><a href="engines.html">Двигатели</a>
+			</li>
+			<li><a href="engine.html">Двигатель skoda 1.4 TSI</a>
+			</li>
+			<li><a href="news.html">Новости</a>
+			</li>
+			<li><a href="news-category.html">Новости категории</a>
+			</li>
+			<li><a href="news-inner.html">news-inner</a>
+			</li>
+			<li><a href="404.html">404</a>
+			</li>
+			<li><a href="ui.html">UI</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		$('#toogle-23').on('click', function(event) {
+			event.preventDefault();
+			/*Act on the event */
+			$('#pages-22').toggleClass('open');
+		});
+	</script>
+</body>
+
+</html>

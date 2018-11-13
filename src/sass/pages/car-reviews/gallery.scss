@@ -1,0 +1,46 @@
+.gallery {
+  &>.container {
+    padding: 0;
+  }
+  .gallery-for {
+    .slick-slide {
+      width: 1200px;
+      opacity: 0.3;
+      transition: all ease-in 0.3s;
+      @include mq('desktop', 'max') {
+        width: 950px;
+      }
+
+      @include mq('laptop', 'max') {
+        width: 738px;
+      }
+
+      @include mq('tablet', 'max') {
+        width: 100vw;
+      }
+    }
+    .slick-center {
+      opacity: 1;
+      transition: all ease-in 0.3s;
+    }
+  }
+  .gallery-nav {
+    @include mq('tablet', 'max') {
+      display: none;
+    }
+    .slick-slide {
+      width: 240px;
+      cursor: pointer;
+      @include mq('desktop', 'max') {
+        width: 190px;
+      }
+      @include mq('laptop', 'max') {
+        width: 147px;
+      }
+    }
+
+    .slick-current {
+      opacity: 0.3;
+    }
+  }
+}

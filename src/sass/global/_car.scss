@@ -1,0 +1,84 @@
+.cars {
+  &-wrap {
+    @include mq('tablet', 'max') {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.car {
+  display: block;
+  width: 282px;
+  height: auto;
+  margin-bottom: 18px;
+  cursor: pointer;
+
+  @include mq('desktop', 'max') {
+    width: 50%;
+    height: auto;
+  }
+
+  @include mq('tablet', 'max') {
+    width: 100%;
+    height: auto;
+  }
+
+  &-wrap {
+    margin: 0 9px;
+    padding: 23px 25px;
+    height: 100%;
+    background-color: #FBFBFB;
+    @include mq('tablet', 'max') {
+      height: auto;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    .car-wrap {
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, .15);
+      text-decoration: none;
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &-img {
+    min-height: 141px;
+    margin-bottom: 26px;
+    text-align: center;
+    img {
+      width: 184px;
+      height: auto;
+    }
+  }
+
+  &-desc {
+
+  }
+
+  &-desc__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-title;
+  }
+
+  &-desc__generation {
+    margin: 0;
+    margin-bottom: 6px;
+    font-size: 13px;
+    line-height: 19px;
+    color: $color-title;
+  }
+
+  &-desc__year {
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-title;
+    opacity: 0.4;
+  }
+}

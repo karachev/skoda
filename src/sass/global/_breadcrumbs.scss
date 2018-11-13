@@ -1,0 +1,98 @@
+.breadcrumbs {
+  padding: 15px 0 34px;
+  background: #FBFBFB;
+  .h1 {
+    margin-bottom: 20px;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    @include mq('tablet', 'max'){
+      //justify-content: center;
+    }
+    li {
+      position: relative;
+      color: $color-title;
+      &:not(:last-child){
+        margin-right: 30px;
+        &:after {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -23px;
+          content: '';
+          display: block;
+          width: 14px;
+          height: 10px;
+          background: url("../images/icon-breadcrumb.svg") no-repeat;
+        }
+      }
+      a {
+        font-family: $font-family-main;
+        @include font-size(15px);
+        color:$color-black;
+        opacity: .5;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+      &:not(:last-child) {
+        a {
+          color: #4BA82E;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+//breadcrumbs
+.breadcrumbs-block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include mq("tablet", "max"){
+    flex-direction: column;
+  }
+}
+.breadcrumbs-block-autor{
+  display: flex;
+  align-items: center;
+  @include mq("tablet", "max"){
+    margin-top: 20px;
+  }
+  p{
+    margin: 0;
+    margin-right: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 27px;
+    width: 96px;
+    background: #4BA82E;
+    height: 27px;
+    color: #fff;
+    font-family: $font-family-regular;
+    text-align: center;
+    @media screen and (max-width:400px){
+      @include font-size(14px);
+      margin-right: 10px;
+    }
+  }
+  span{
+    color: #7E7E7E;
+    font-family: $font-family-main;
+    @media screen and (max-width:400px){
+      @include font-size(14px);
+    }
+    a{
+      font-size: 16px;
+      text-transform: capitalize;
+      padding-left: 5px;
+      @media screen and (max-width:400px){
+        @include font-size(14px);
+      }
+    }
+  }
+}

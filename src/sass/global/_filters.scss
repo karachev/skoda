@@ -1,0 +1,114 @@
+.filters {
+  //height: 350px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #FBFBFB;
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+    @include mq('laptop', 'max') {
+      flex-wrap: wrap;
+    }
+    @include mq('tablet', 'max') {
+      padding: 10px 12px;
+    }
+  }
+  &-left,
+  &-right {
+    display: flex;
+    flex-wrap: wrap;
+    @include mq('laptop', 'max') {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .SumoSelect {
+      @include mq('tablet', 'max') {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &-left {
+    .SumoSelect {
+      width: 250px;
+      @include mq('desktop', 'max') {
+        width: 190px;
+      }
+      @include mq('laptop', 'max') {
+        width: 160px;
+      }
+    }
+  }
+  &-right {
+    max-width: 200px;
+    @include mq('desktop', 'max') {
+      max-width: 140px;
+    }
+    @include mq('laptop', 'max') {
+      width: 100%;
+      max-width: none;
+    }
+    .SumoSelect {
+      @include mq('laptop', 'max') {
+        width: 160px;
+      }
+    }
+  }
+  &-item {
+    //margin-right: 11px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 12px;
+    width: 100%;
+    font-family: $font-family-main;
+    font-size: 14px;
+    line-height: 21px;
+    opacity: 0.6;
+    color: $color-black;
+    text-transform: initial;
+  }
+  .SumoSelect {
+    margin-right: 11px;
+  }
+  &-checkbox {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    @include mq('tablet', 'max') {
+      margin-left: 0;
+    }
+    input[type='checkbox'] {
+      display: none;
+    }
+    label {
+      position: relative;
+      padding-left: 30px;
+      font-family: $font-family-main;
+      font-size: 14px;
+      line-height: 19px;
+      color: $color-black;
+      text-transform: initial;
+      cursor: pointer;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: #EAEAEA;
+        cursor: pointer;
+      }
+    }
+    input[type='checkbox']:checked + label:before {
+      background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2210%22%20viewBox%3D%220%200%2012%2010%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%204.348L4.429%208%2011%201%22%20stroke%3D%22%234BA82E%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E');
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+}

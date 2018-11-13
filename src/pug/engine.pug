@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+    include global/head.pug
+    body
+        include global/header.pug
+        //main
+        main.wrapper
+            include pages/engine/breadcrumbs
+            include pages/engine/engine-table
+            include pages/engine/answers
+            include pages/engine/recommend-reviews
+        include global/footer
+        include global/modal
+        include global/modal-menu
+        include global/scripts
+        include pages/pages

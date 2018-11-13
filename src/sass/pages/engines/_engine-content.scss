@@ -1,0 +1,102 @@
+/* ==========================================================================
+   ENGINE-CONTENT
+   ===========================================================================*/
+.engine-content{
+  padding: 40px 0;
+  position: relative;
+}
+.engine-content__text{
+  @include font-size(16px);
+}
+.engine-content-block{
+  margin-top: 50px;
+}
+.engine-content-block-head{
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news__title_img{
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 85px;
+    height: 58px;
+  }
+}
+.fabia{
+  &:after{
+    background: url("../images/fabia-engine.png") no-repeat;
+    background-size: 100%;
+  }
+}
+.octavia{
+  &:after{
+    background: url("../images/octavia-engine.png") no-repeat;
+    background-size: 100%;
+  }
+}
+.rapid{
+  &:after{
+    background: url("../images/rapid-engine.png") no-repeat;
+    background-size: 100%;
+  }
+}
+.superb{
+  &:after{
+    top: 69%;
+    background: url("../images/superb-engine.png") no-repeat;
+    background-size: 100%;
+  }
+}
+.engine-content-block-list{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include mq('tablet-small', 'max'){
+    flex-wrap: wrap;
+  }
+  ul{
+    width: 30%;
+    @include mq('laptop', 'max'){
+      width: 48%;
+    }
+    @include mq('tablet-small', 'max'){
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    li{
+      color:$color-black;
+      &:not(:last-child){
+        margin-bottom: 15px;
+      }
+      &:first-child{
+        margin-bottom: 20px;
+        font-family: $font-family-regular;
+        @include font-size(20px);
+        text-transform: uppercase;
+        color:$color-black;
+      }
+      a{
+        font-family: $font-family-main;
+        @include font-size(15px);
+        color: #4BA82E;
+        text-transform: none;
+      }
+    }
+  }
+}
+.news__link_engine{
+  @include mq('tablet-small', 'max'){
+    @include font-size(15px);
+    height: 18px;
+  }
+}
+/* end engine-content */

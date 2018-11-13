@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru")
+    include global/head.pug
+    body
+        include global/header.pug
+        //main
+        main.wrapper
+            include pages/car-reviews/gallery-point
+
+            include pages/car-reviews/breadcrumbs
+            include pages/car-reviews/review-slider
+            include pages/car-reviews/second-section
+            include pages/car-reviews/reviews-content
+
+            include pages/car-reviews/gallery
+            include pages/car-reviews/answers
+            include pages/car-reviews/recommend-reviews
+        include global/footer
+        include global/modal
+        include global/modal-menu
+        include global/scripts
+        include pages/pages

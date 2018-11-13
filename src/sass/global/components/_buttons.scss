@@ -1,0 +1,89 @@
+/* ==========================================================================
+	 BUTTONS
+	 ===========================================================================*/
+.btn,
+.btn[type="button"]{
+	//position
+	position: relative;
+	z-index: z(button);
+	//box mmodel
+	display: inline-block;
+	vertical-align: middle;
+	padding: btn(padding);
+	min-width: btn(min-width);
+	max-width: btn(max-width);
+	height: btn(height);
+	//font
+	font-family: btn(font-family);
+	@include font-size(btn(font-size));
+	line-height: btn(line-height);
+	font-weight: btn(font-weight);
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	// other
+	overflow: hidden;
+	cursor: pointer;
+
+	touch-action: manipulation;
+	user-select: none;
+	-webkit-appearance: inherit;
+	z-index: 1;
+	transition: all .3s ease;
+	&:focus{
+		outline:none;
+	}
+	&:hover{
+		cursor: pointer;
+		text-decoration: none;
+	}
+	&:active {
+		color: $color-white;
+		background-color: #3E9C21;
+	}
+	@include mq ('tablet', 'max') {
+		padding: 0 10px;
+	}
+	&.btn_full{
+		width: 100%;
+		min-width: 0;
+	}
+}
+
+.btn_primary {
+	color: $color-white;
+	background-color: $color-main;
+	&:hover{
+		opacity: 0.9;
+	}
+}
+
+.btn_secondary {
+	color: $color-main;
+	background-color: $color-white;
+	border: 1px solid $color-main;
+	&:hover{
+		color: $color-white;
+		background-color: $color-main;
+	}
+}
+
+/* disabled styles */
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn{
+	cursor: not-allowed;
+	pointer-events: none;
+	opacity: .25;
+	filter: alpha(opacity=25);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+button[type="button"]{
+	cursor: pointer;
+}
+
+
+
+/* end buttons*/

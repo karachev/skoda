@@ -1,0 +1,77 @@
+/* ==========================================================================
+  reviews-content
+  ===========================================================================*/
+.reviews-content{
+  padding: 50px 0;
+  @include mq('tablet', 'max'){
+    padding: 20px 0;
+  }
+}
+.reviews-content__title{
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $font-family-regular;
+  @include font-size(22px);
+  color:#000;
+  line-height: 33px;
+}
+.reviews-content-block{
+  &:not(:last-child){
+    margin-bottom: 60px;
+    @include mq("tablet","max"){
+      margin-bottom: 20px;
+    }
+  }
+  p.content__txt{
+    margin-bottom: 30px;
+    @include mq('tablet', 'max'){
+      @include font-size(15px);
+    }
+  }
+}
+.reviews-content-block-list{
+  display: flex;
+  flex-direction: row;
+  @include mq("tablet-small","max"){
+    flex-direction: column;
+  }
+  li{
+    font-family: $font-family-main;
+    @include font-size(17px);
+    color:#000;
+    line-height: 46px;
+    @include mq('tablet', 'max'){
+      @include font-size(15px);
+      line-height: 36px;
+    }
+  }
+  ol{
+    margin-right: 100px;
+    @include mq("tablet","max"){
+      margin-right: 50px;
+    }
+    @include mq("tablet-small","max"){
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+  ul{
+    li{
+      position: relative;
+      padding-left: 13px;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 7px;
+        height: 7px;
+        background: #4BA82E;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+/* end reviews-content */

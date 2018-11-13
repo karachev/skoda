@@ -1,0 +1,13 @@
+.news {
+  &-item {
+    @include mq('tablet', 'max') {
+      padding: 0;
+    }
+    &:nth-of-type(n + 4) {
+      display: none;
+      @include mq('desktop', 'max') {
+        display: block;
+      }
+    }
+  }
+}

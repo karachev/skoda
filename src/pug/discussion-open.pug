@@ -1,0 +1,17 @@
+doctype html
+html(lang="ru")
+    include global/head.pug
+    body
+        include global/header.pug
+        //main
+        main.wrapper
+            include pages/discussion-open/breadcrumbs
+            include pages/discussion-open/search
+            include pages/discussion-open/discussions
+            include pages/discussion-open/best-answer
+            include pages/discussion-open/answers
+        include global/footer
+        include global/modal
+        include global/modal-menu
+        include global/scripts
+        include pages/pages

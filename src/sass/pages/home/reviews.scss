@@ -1,0 +1,7 @@
+.reviews {
+  &-item {
+    @include mq('tablet', 'max') {
+      padding: 0;
+    }
+  }
+}

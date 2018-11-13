@@ -1,0 +1,114 @@
+/* ==========================================================================
+  content
+  ===========================================================================*/
+.content{
+  .right{
+    p{
+      font-family: $font-family-main;
+      @include font-size(17px);
+      color: #000;
+      line-height: 26px;
+    }
+  }
+  .engine-table-article-img_left{
+    @include mq("laptop", 'max'){
+      margin-bottom: 0;
+    }
+    @include mq('tablet', 'max'){
+      margin: 20px 0;
+    }
+  }
+  .content__txt{
+    @include mq("laptop"){
+      margin-bottom: 20px;
+    }
+    @include mq("tablet", "max"){
+      @include font-size(15px);
+    }
+  }
+}
+.content-img{
+  margin-bottom: 60px;
+  position: relative;
+  max-height: 650px;
+  @include mq('laptop', 'max'){
+    margin-bottom: 30px;
+  }
+}
+.content-img-date{
+  position: absolute;
+  left: 37px;
+  bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: #fff;
+    opacity: .5;
+  }
+  p{
+    margin: 0;
+    font-family: $font-family-main;
+    color:#fff;
+    &:first-child{
+      @include font-size(18px);
+      @include mq("tablet-small", "max"){
+        @include font-size(14px);
+      }
+    }
+    &:last-child{
+      padding-left: 22px;
+      @include font-size(17px);
+      opacity: .5;
+      @include mq("tablet-small", "max"){
+        @include font-size(14px);
+      }
+    }
+  }
+  @include mq('tablet','max'){
+    bottom: 38px;
+    left: 15px;
+  }
+  @include mq("tablet-small", "max"){
+    bottom: 34px;
+    left: 10px;
+  }
+}
+.content-img-hashtag{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  margin: 0 auto;
+  text-align: center;
+  @include mq('tablet', 'max'){
+    text-align: right;
+    bottom: 15px;
+    left: 10px;
+    right: auto;
+  }
+}
+.content__txt{
+  font-family: $font-family-main;
+  @include font-size(17px);
+  color: #000;
+  line-height: 26px;
+  a{
+    font-family: $font-family-main;
+    margin-left: 3px;
+    @include font-size(17px);
+    text-transform: none;
+  }
+}
+/* end content */

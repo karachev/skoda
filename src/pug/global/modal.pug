@@ -1,0 +1,72 @@
+//modal-sign-in
+.modal-popup.modal-popup_signin
+    button.btn-close
+        svg.icon.close-modal
+            use(xlink:href='images/sprite/sprite.svg#icon-close')
+    .modal__title Вход на портал
+    .modal__text Выполните вход, чтобы получить возможность комментировать и участвовать в обсуждениях.
+    a(href="#").modal__link Нет аккаунта?
+    form.form.form-signin
+        .form-group
+            input.modal__input(type="text", placeholder="Логин (E-mail)", required)
+            label Логин(Email)
+        .form-group
+            input.modal__input(type="password", placeholder="Пароль", required)
+            label Пароль
+        label.checkbox
+            input.checkbox__input(type='checkbox' required)
+            span.checkbox__label Запомнить меня
+        a(href="#").modal__link Забыл пароль
+        button.btn.btn_primary.btn_uppercase(type="submit") Вход на портал
+    .modal__text Войти через соц. сети:
+    .modal-socials
+        a(href="#")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#icon-fb')
+        a(href="#")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#icon-tw')
+        a(href="#")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#icon-vk')
+        a(href="#")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#icon-ok')
+//modal-signup
+.modal-popup.modal-popup_signup
+    button.btn-close
+        svg.icon.close-modal
+            use(xlink:href='images/sprite/sprite.svg#icon-close')
+    .modal__title Регистрация
+    .modal__text Зарегистрируйтесь, чтобы получить возможность комментировать и участвовать в обсуждениях.
+    a(href="#").modal__link У меня уже есть аккаунт
+    form.form#form-signup
+        .form-group
+            input.modal__input(type="text", name="form_name", placeholder="Логин (E-mail)", required)
+            label Логин(Email)
+        .form-group
+            input.modal__input(type="password", name="pass", placeholder="Пароль", required)
+            label Пароль
+        .form-group
+            input.modal__input(type="password", name="pass2", placeholder="Повторите пароль", required)
+            label Повторите пароль
+        label.checkbox
+            input.checkbox__input(type='checkbox' required)
+            span.checkbox__label Даю согласие на
+                a(href="#")  обработку персональных данных
+        button.btn.btn_primary.btn_uppercase(type="submit") Зарегистрироваться
+    .modal__text Войти через соц. сети:
+    .modal-socials
+        a(href="#")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#icon-fb')
+        a(href="#")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#icon-tw')
+        a(href="#")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#icon-vk')
+        a(href="#")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#icon-ok')
+.modal-overlay

@@ -1,0 +1,41 @@
+//header
+header.header
+    .header--desktop
+        .header-top
+            .container.container-flex
+                a.header-top__logo(href="./")
+                    img(src="images/logo.svg", alt="Skoda")
+                .header-top-right
+                    .header-social
+                        a.header-social__link.header-social__link--facebook(href="#") Facebook
+                        a.header-social__link.header-social__link--instagram(href="#") Instagram
+                        a.header-social__link.header-social__link--twitter(href="#") Twitter
+                    .header-buttons
+                        button.header-buttons__login Вход
+                        button.header-buttons__registration Регистрация
+        .header-bottom
+            .container.container-flex
+                nav.header-nav
+                    a.header-nav__link(href="#") Автомобили
+                    a.header-nav__link(href="#") Новости
+                    a.header-nav__link(href="#") Обзоры
+                    a.header-nav__link(href="#") Двигатели
+                    a.header-nav__link(href="#") Фото
+                    a.header-nav__link(href="#") Обсуждения
+                form.header-search
+                    input(type="search", placeholder="Поиск по публикациям")
+                    input(type="submit", placeholder="Поиск")
+    .header--mobile
+        .container
+            button.header__btn-menu(aria-label="Меню")
+                svg.icon
+                    use(xlink:href='images/sprite/sprite.svg#menu-button')
+            a.header__logo(href="./", aria-label="Логотип Skoda")
+                svg.icon
+                    use(xlink:href='images/sprite/sprite.svg#footer-logo')
+            button.header__registration(aria-label="Кнопка регистрации")
+                svg.icon
+                    use(xlink:href='images/sprite/sprite.svg#person-mobile')
+            button.header__search(aria-label="Кнопка поиска")
+                svg.icon
+                    use(xlink:href='images/sprite/sprite.svg#icon-search')

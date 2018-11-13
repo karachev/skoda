@@ -1,0 +1,207 @@
+.best-answer {
+  margin-bottom: 60px;
+  @include mq('desktop', 'max') {
+    margin-bottom: 30px;
+  }
+  &__title {
+    margin-top: 50px;
+    margin-bottom: 19px;
+    font-size: 22px;
+    color: $color-black;
+    @include mq('desktop', 'max') {
+      margin-top: 25px;
+    }
+  }
+
+  .answer {
+    background: #FBFBFB;
+    border-right: 6px solid #4BA82E;
+  }
+}
+
+.answer {
+  padding: 22px 48px 22px 22px;
+
+  @include mq('tablet', 'max') {
+    padding: 22px 0;
+  }
+
+  .answer {
+    margin-left: 48px;
+    padding: 0 48px 0 22px;
+    border-left: 1px solid #C4C4C4;
+
+    @include mq('tablet', 'max') {
+      margin-left: 43px;
+      padding: 22px 0 22px 14px;
+    }
+    .answer__comment {
+      margin-bottom: 40px;
+    }
+    .answer__comment--last {
+      margin-bottom: 0;
+    }
+  }
+
+  &-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    margin-bottom: 21px;
+    @include mq('tablet', 'max') {
+      margin-right: 14px;
+    }
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &-row {
+    width: 100%;
+    margin-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__name {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 0.7;
+    text-transform: initial;
+    word-break: break-word;
+    @include mq('tablet', 'max') {
+      line-height: 1;
+    }
+  }
+
+  &__time {
+    width: 100%;
+    margin: 0;
+    font-size: 12px;
+    line-height: 0.7;
+    color: $color-black;
+    opacity: 0.5;
+    @include mq('tablet', 'max') {
+      line-height: 1.2;
+    }
+  }
+
+  &-ratings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 7px;
+    margin-right: 20px;
+    height: 68px;
+    justify-content: space-between;
+    @include mq('tablet', 'max') {
+      margin-left: 3px;
+    }
+  }
+
+  &-ratings__like {
+    width: 18px;
+    height: 18px;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2217%22%20viewBox%3D%220%200%2018%2017%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M6.04%207.556c1.838-2.87%202.49-3.687%202.382-5.347-.11-1.661.202-2.118.943-2.2.74-.082%202.132.347%202.376%203.065.106%201.176-.687%203.492-.687%203.492l5.546.003c.785%200%201.4.356%201.4%201.49%200%201.064-1.11%201.384-1.11%201.384s.71.294.71%201.188c0%20.905-.738%201.313-1.225%201.313.303.16.726.466.633%201.24-.093.775-.614%201.057-1.128%201.224.332.217.574.82.39%201.282-.25.623-.907%201.31-2.383%201.31H6.992c-.522%200-.91-.253-.992-.564V7.902s0-.274.04-.346zM0%208h5v9H1.89L0%208z%22%20fill%3D%22%23D4D4D4%22%2F%3E%3C%2Fsvg%3E');
+    cursor: pointer;
+  }
+
+  &-ratings__dislike {
+    transform: scale(1, -1);
+  }
+
+  &-ratings__count {
+    font-family: $font-family-main;
+    line-height: 23px;
+    font-size: 17px;
+    letter-spacing: 0.01em;
+    color: #4BA82E;
+  }
+
+  &__text {
+    width: 100%;
+    margin: 0;
+    font-size: 15px;
+    line-height: 17px;
+    text-transform: initial;
+  }
+
+  &__comment {
+    margin-top: 16px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    font-family: $font-family-main;
+    line-height: 23px;
+    font-size: 15px;
+    color: #61B248;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    @include mq('tablet', 'max') {
+      margin-left: 36px;
+    }
+  }
+}
+
+.answers {
+  &-form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 100px;
+    padding: 20px 23px;
+    height: 168px;
+    background: #EAEAEA;
+    @include mq('tablet', 'max') {
+      justify-content: center;
+    }
+    input[type=file] {
+      display: none;
+    }
+  }
+
+  &-form__comment {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    resize: none;
+  }
+
+  &-form__download {
+    position: absolute;
+    top: 25px;
+    right: 26px;
+    width: 12px;
+    height: 22px;
+    font-size: 0;
+    background-color: #EAEAEA;
+    border: none;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2222%22%20viewBox%3D%220%200%2012%2022%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20opacity%3D%22.4%22%20d%3D%22M6%2022c1.591%200%203.117-.63%204.243-1.753A5.975%205.975%200%200%200%2012%2016.017V4.162a4.477%204.477%200%200%200-1.42-2.961%204.5%204.5%200%200%200-6.126%200%204.477%204.477%200%200%200-1.42%202.96v9.875c0%20.784.313%201.537.869%202.091a2.97%202.97%200%200%200%204.194%200%202.954%202.954%200%200%200%20.869-2.091v-7.28a.909.909%200%200%200-.913-.91.914.914%200%200%200-.912.91v7.28A1.136%201.136%200%200%201%206%2015.175a1.142%201.142%200%200%201-1.14-1.138V4.163a2.66%202.66%200%200%201%20.859-1.722%202.673%202.673%200%200%201%203.596%200%202.66%202.66%200%200%201%20.86%201.722v11.853c0%201.105-.44%202.164-1.223%202.944a4.18%204.18%200%200%201-5.904%200%204.158%204.158%200%200%201-1.223-2.944V4.481a.909.909%200%200%200-.912-.91.914.914%200%200%200-.913.91v11.535c0%201.587.632%203.11%201.757%204.231A6%206%200%200%200%206%2022z%22%20fill%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  &-form__submit {
+    min-width: 267px;
+    height: 62px;
+    line-height: 62px;
+    @include mq('tablet', 'max') {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+}

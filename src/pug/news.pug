@@ -1,0 +1,18 @@
+doctype html
+html(lang="ru")
+    include global/head.pug
+    body
+        include global/header.pug
+        //main
+        main.wrapper
+            include pages/news/breadcrumbs
+            .container
+                include pages/news/filters
+            include pages/news/search
+            include pages/news/recommend-reviews
+            include pages/news/pagination
+        include global/footer
+        include global/modal
+        include global/modal-menu
+        include global/scripts
+        include pages/pages

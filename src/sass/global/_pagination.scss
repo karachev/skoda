@@ -1,0 +1,87 @@
+//pagination
+.pagination {
+  text-align: center;
+}
+.pagination__more {
+  position: relative;
+  margin-bottom: 110px;
+  padding-right: 42px;
+  font-family: $font-family-regular;
+  font-size: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4BA82E;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  @include mq('tablet', 'max') {
+    margin-bottom: 55px;
+  }
+
+    &:hover {
+    text-decoration: underline;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 13px;
+    margin: auto;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2213%22%20viewBox%3D%220%200%2020%2013%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M13.66.259l6.061%205.617a.838.838%200%200%201%200%201.248l-6.06%205.618a1.006%201.006%200%200%201-1.348%200%20.838.838%200%200%201%200-1.249l4.435-4.11H0V5.617h16.748l-4.435-4.11a.838.838%200%200%201%200-1.248%201.006%201.006%200%200%201%201.347%200z%22%20fill%3D%22%234BA82E%22%2F%3E%3C%2Fsvg%3E');
+    transform: rotate(90deg);
+  }
+}
+.pagination-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 44px;
+  li{
+    width: 46px;
+    height: 46px;
+    border:1px solid #C8C8C8;
+    &:not(:last-child){
+      margin-right: 8px;
+    }
+    &:first-child{
+      margin-right: 20px;
+    }
+    &:nth-child(6){
+      margin-right: 25px;
+    }
+    &:nth-child(5){
+      border:none;
+    }
+    a{
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      @include font-size(18px);
+      text-align: center;
+      line-height: 44px;
+      color:$color-black;
+    }
+  }
+  .prev{
+    background: url(../images/pagin-arrow.svg) no-repeat center;
+  }
+  .next{
+    background: url(../images/pagin-arrow.svg) no-repeat center;
+    transform: rotate(180deg);
+  }
+  .more{
+    background: url(../images/icon-more.svg) no-repeat center;
+  }
+  .focus{
+    border-color: green;
+    border-width: 2px;
+  }
+}

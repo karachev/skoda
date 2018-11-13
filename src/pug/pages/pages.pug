@@ -1,0 +1,25 @@
+#pages-22.pages
+	#toogle-23.pages-header
+		p Навигация страниц верстки
+		span GP
+		i#close-24.icon-pages
+	ul
+		li: a(href="./") Главная
+		li: a(href="cars.html") Машины
+		li: a(href="car-reviews.html") car-reviews
+		li: a(href="reviews.html") reviews
+		li: a(href="discussion.html") Обсуждения
+		li: a(href="discussion-open.html") Открытые Обсуждения
+		li: a(href="engines.html") Двигатели
+		li: a(href="engine.html") Двигатель skoda 1.4 TSI
+		li: a(href="news.html") Новости
+		li: a(href="news-category.html") Новости категории
+		li: a(href="news-inner.html") news-inner
+		li: a(href="404.html") 404
+		li: a(href="ui.html") UI
+script.
+	$('#toogle-23').on('click', function(event) {
+		event.preventDefault();
+		/*Act on the event */
+		$('#pages-22').toggleClass('open');
+	});

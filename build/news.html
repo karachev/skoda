@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Butterfly</title>
+	<meta name="keywords" content="keywords">
+	<meta name="description" content="description">
+	<!--favicon-->
+	<link rel="apple-touch-icon" sizes="192x192" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#dbe6f2">
+	<meta name="theme-color" content="#ffffff">
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+	<!--meta(name="viewport" content="width=device-width, initial-scale=1.0")-->
+	<!--modernizr-->
+	<script src="js/modernizr-custom.min.js"></script>
+	<!--styles-->
+	<link rel="stylesheet" type="text/css" href="css/app.css?v=1.0">
+</head>
+
+<body>
+	<!--header-->
+	<header class="header">
+		<div class="header--desktop">
+			<div class="header-top">
+				<div class="container container-flex">
+					<a class="header-top__logo" href="./">
+						<img src="images/logo.svg" alt="Skoda">
+					</a>
+					<div class="header-top-right">
+						<div class="header-social"><a class="header-social__link header-social__link--facebook" href="#">Facebook</a><a class="header-social__link header-social__link--instagram" href="#">Instagram</a><a class="header-social__link header-social__link--twitter" href="#">Twitter</a>
+						</div>
+						<div class="header-buttons">
+							<button class="header-buttons__login">Вход</button>
+							<button class="header-buttons__registration">Регистрация</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-bottom">
+				<div class="container container-flex">
+					<nav class="header-nav"><a class="header-nav__link" href="#">Автомобили</a><a class="header-nav__link" href="#">Новости</a><a class="header-nav__link" href="#">Обзоры</a><a class="header-nav__link" href="#">Двигатели</a><a class="header-nav__link" href="#">Фото</a><a class="header-nav__link"
+						href="#">Обсуждения</a>
+					</nav>
+					<form class="header-search">
+						<input type="search" placeholder="Поиск по публикациям">
+						<input type="submit" placeholder="Поиск">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="header--mobile">
+			<div class="container">
+				<button class="header__btn-menu" aria-label="Меню">
+					<svg class="icon">
+						<use xlink:href="images/sprite/sprite.svg#menu-button"></use>
+					</svg>
+				</button>
+				<a class="header__logo" href="./" aria-label="Логотип Skoda">
+					<svg class="icon">
+						<use xlink:href="images/sprite/sprite.svg#footer-logo"></use>
+					</svg>
+				</a>
+				<button class="header__registration" aria-label="Кнопка регистрации">
+					<svg class="icon">
+						<use xlink:href="images/sprite/sprite.svg#person-mobile"></use>
+					</svg>
+				</button>
+				<button class="header__search" aria-label="Кнопка поиска">
+					<svg class="icon">
+						<use xlink:href="images/sprite/sprite.svg#icon-search"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</header>
+	<!--main-->
+	<main class="wrapper">
+		<section class="breadcrumbs">
+			<div class="container">
+				<h1 class="h1">Новости</h1>
+				<ul class="breadcrumbs-list">
+					<li><a href="#">Главная</a>
+					</li>
+					<li><a>Новости</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<div class="container">
+			<section class="filters">
+				<div class="filters-wrap">
+					<div class="filters-left">
+						<h3 class="filters__title">Фильтровать по:</h3>
+						<select class="filters-item filter-model" multiple="multiple" placeholder="Модель">
+							<option value="Fabia">Fabia</option>
+							<option value="Octavia">Octavia</option>
+							<option value="Kodaq">Kodaq</option>
+							<option value="Rapid">Rapid</option>
+							<option value="Superb">Superb</option>
+						</select>
+						<select class="filters-item filter-complect" multiple="multiple" placeholder="Комплектация">
+							<option value="Fabia">Fabia</option>
+							<option value="Octavia">Octavia</option>
+							<option value="Kodaq">Kodaq</option>
+							<option value="Rapid">Rapid</option>
+							<option value="Superb">Superb</option>
+						</select>
+						<select class="filters-item filter-engine" multiple="multiple" placeholder="Двигатель">
+							<option value="Fabia">Fabia</option>
+							<option value="Octavia">Octavia</option>
+							<option value="Kodaq">Kodaq</option>
+							<option value="Rapid">Rapid</option>
+							<option value="Superb">Superb</option>
+						</select>
+						<div class="filters-checkbox">
+							<input type="checkbox" id="with-video" name="with-video">
+							<label for="with-video">С видео</label>
+						</div>
+					</div>
+					<div class="filters-right">
+						<h3 class="filters__title">Сортировать по:</h3>
+						<select class="filters-item filter-sort" multiple="multiple" placeholder="Новизне">
+							<option value="Fabia">Fabia</option>
+							<option value="Octavia">Octavia</option>
+							<option value="Kodaq">Kodaq</option>
+							<option value="Rapid">Rapid</option>
+							<option value="Superb">Superb</option>
+						</select>
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="search">
+			<div class="container container-flex">
+				<form class="search-field">
+					<input type="search" placeholder="Поиск по публикациям">
+					<input type="submit" placeholder="Поиск">
+				</form>
+				<div class="search-labels">
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="Инсайты" id="insights">
+						<label for="insights">Инсайты</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="экстерьер" id="exterior">
+						<label for="exterior">экстерьер</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="технологии" id="insights2">
+						<label for="insights2">технологии</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="новинки" id="exterior2">
+						<label for="exterior2">новинки</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="Инсайты" id="insights3">
+						<label for="insights3">Инсайты</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="технологии" id="exterior3">
+						<label for="exterior3">технологии</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="Инсайты" id="insights4">
+						<label for="insights4">Инсайты</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="экстерьер" id="exterior4">
+						<label for="exterior4">экстерьер</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="Инсайты" id="insights5">
+						<label for="insights5">Инсайты</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="новинки" id="exterior5">
+						<label for="exterior5">новинки</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="технологии" id="insights6">
+						<label for="insights6">технологии</label>
+					</div>
+					<div class="search-labels__group">
+						<input type="checkbox" name="search-labels" value="экстерьер" id="exterior7">
+						<label for="exterior7">экстерьер</label>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="cards recommend-reviews">
+			<div class="container">
+				<div class="cards-top recommend-reviews-top">
+					<h2 class="cards__title recommend-reviews__title h2">Интересное с этим двигателем</h2>
+				</div>
+				<div class="cards-list">
+					<div class="cards-wrap">
+						<a class="review-card" href="#">
+							<div class="review-card-wrap">
+								<div class="review-card-img">
+									<img src="uploads/overview-1.jpg" alt="Четырехглазая езда: тест обновленной Skoda Octavia">
+								</div>
+								<div class="review-card-desc">
+									<h2 class="review-card-desc__title">Четырехглазая езда: тест обновленной Skoda Octavia</h2>
+									<div class="review-card-desc-row"><span class="review-card-desc__label">Обзор</span><span class="review-card-desc__date">15.04.2018</span>
+									</div>
+									<div class="review-card-desc-bottom">
+										<p class="review-card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="review-card review-card--no-img" href="#">
+							<div class="review-card-wrap">
+								<div class="review-card-img"></div>
+								<div class="review-card-desc">
+									<h2 class="review-card-desc__title">Четырехглазая езда: тест обновленной Skoda Octavia</h2>
+									<div class="review-card-desc-row"><span class="review-card-desc__label">Обзор</span><span class="review-card-desc__date">15.04.2018</span>
+									</div>
+									<div class="review-card-desc-bottom">
+										<p class="review-card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="review-card" href="#">
+							<div class="review-card-wrap">
+								<div class="review-card-img">
+									<img src="uploads/overview-3.jpg" alt="Четырехглазая езда: тест обновленной Skoda Octavia">
+								</div>
+								<div class="review-card-desc">
+									<h2 class="review-card-desc__title">Четырехглазая езда: тест обновленной Skoda Octavia</h2>
+									<div class="review-card-desc-row"><span class="review-card-desc__label">Обзор</span><span class="review-card-desc__date">15.04.2018</span>
+									</div>
+									<div class="review-card-desc-bottom">
+										<p class="review-card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="review-card" href="#">
+							<div class="review-card-wrap">
+								<div class="review-card-img">
+									<img src="uploads/overview-4.jpg" alt="Четырехглазая езда: тест обновленной Skoda Octavia">
+								</div>
+								<div class="review-card-desc">
+									<h2 class="review-card-desc__title">Четырехглазая езда: тест обновленной Skoda Octavia</h2>
+									<div class="review-card-desc-row"><span class="review-card-desc__label">Обзор</span><span class="review-card-desc__date">15.04.2018</span>
+									</div>
+									<div class="review-card-desc-bottom">
+										<p class="review-card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="review-card" href="#">
+							<div class="review-card-wrap">
+								<div class="review-card-img">
+									<img src="uploads/overview-5.jpg" alt="Четырехглазая езда: тест обновленной Skoda Octavia">
+								</div>
+								<div class="review-card-desc">
+									<h2 class="review-card-desc__title">Четырехглазая езда: тест обновленной Skoda Octavia</h2>
+									<div class="review-card-desc-row"><span class="review-card-desc__label">Обзор</span><span class="review-card-desc__date">15.04.2018</span>
+									</div>
+									<div class="review-card-desc-bottom">
+										<p class="review-card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="review-card" href="#">
+							<div class="review-card-wrap">
+								<div class="review-card-img">
+									<img src="uploads/overview-6.jpg" alt="Четырехглазая езда: тест обновленной Skoda Octavia">
+								</div>
+								<div class="review-card-desc">
+									<h2 class="review-card-desc__title">Четырехглазая езда: тест обновленной Skoda Octavia</h2>
+									<div class="review-card-desc-row"><span class="review-card-desc__label">Обзор</span><span class="review-card-desc__date">15.04.2018</span>
+									</div>
+									<div class="review-card-desc-bottom">
+										<p class="review-card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="review-card review-card--no-img" href="#">
+							<div class="review-card-wrap">
+								<div class="review-card-img"></div>
+								<div class="review-card-desc">
+									<h2 class="review-card-desc__title">Четырехглазая езда: тест обновленной Skoda Octavia</h2>
+									<div class="review-card-desc-row"><span class="review-card-desc__label">Обзор</span><span class="review-card-desc__date">15.04.2018</span>
+									</div>
+									<div class="review-card-desc-bottom">
+										<p class="review-card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="review-card" href="#">
+							<div class="review-card-wrap">
+								<div class="review-card-img">
+									<img src="uploads/overview-2.jpg" alt="Четырехглазая езда: тест обновленной Skoda Octavia">
+								</div>
+								<div class="review-card-desc">
+									<h2 class="review-card-desc__title">Четырехглазая езда: тест обновленной Skoda Octavia</h2>
+									<div class="review-card-desc-row"><span class="review-card-desc__label">Обзор</span><span class="review-card-desc__date">15.04.2018</span>
+									</div>
+									<div class="review-card-desc-bottom">
+										<p class="review-card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="review-card review-card--no-img" href="#">
+							<div class="review-card-wrap">
+								<div class="review-card-img"></div>
+								<div class="review-card-desc">
+									<h2 class="review-card-desc__title">Четырехглазая езда: тест обновленной Skoda Octavia</h2>
+									<div class="review-card-desc-row"><span class="review-card-desc__label">Обзор</span><span class="review-card-desc__date">15.04.2018</span>
+									</div>
+									<div class="review-card-desc-bottom">
+										<p class="review-card-desc__text">ŠKODA дает первый взгляд на совершенно новую модель хэтчбека, которая знаменует следующую разработку для нового дизайн-кода.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pagination">
+			<div class="container">
+				<ul class="pagination-list">
+					<li>
+						<a class="prev" href="#"></a>
+					</li>
+					<li class="focus"><a href="#">1</a>
+					</li>
+					<li><a href="#">2</a>
+					</li>
+					<li><a href="#">3</a>
+					</li>
+					<li>
+						<a class="more" href="#"></a>
+					</li>
+					<li><a href="#">12</a>
+					</li>
+					<li>
+						<a class="next" href="#"></a>
+					</li>
+				</ul>
+				<button class="pagination__more">Показать еще 10</button>
+			</div>
+		</section>
+	</main>
+	<!--footer-->
+	<footer class="footer">
+		<div class="container">
+			<a class="footer-logo" href="#">
+				<svg class="icon icon-footer">
+					<use xlink:href="images/sprite/sprite.svg#footer-logo"></use>
+				</svg>
+			</a>
+			<div class="footer-nav">
+				<ul>
+					<li><a href="#">Автомобили</a>
+					</li>
+					<li><a href="#">Octavia</a>
+					</li>
+					<li><a href="#">Kodiaq</a>
+					</li>
+					<li><a href="#">Rapid</a>
+					</li>
+					<li><a href="#">Superb</a>
+					</li>
+					<li><a href="#">Fabia</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#">Новости</a>
+					</li>
+					<li><a href="#">Выставки</a>
+					</li>
+					<li><a href="#">Отзывные кампании</a>
+					</li>
+					<li><a href="#">Скандалы</a>
+					</li>
+					<li><a href="#">Новинки</a>
+					</li>
+					<li><a href="#">Первое впечатление</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#">Обзоры</a>
+					</li>
+					<li><a href="#">Топ-обзоры</a>
+					</li>
+					<li><a href="#">Обзоры на новинки</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#">Двигатели</a>
+					</li>
+					<li><a href="#">1.4 TSI DSG</a>
+					</li>
+					<li><a href="#">1.6 MPI MT</a>
+					</li>
+					<li><a href="#">2.0 TDI</a>
+					</li>
+					<li><a href="#">1.6 TDI</a>
+					</li>
+					<li><a href="#">1.6 TSI</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#">Фото</a>
+					</li>
+					<li><a href="#">Octavia</a>
+					</li>
+					<li><a href="#">Kodiaq</a>
+					</li>
+					<li><a href="#">Rapid</a>
+					</li>
+					<li><a href="#">Superb</a>
+					</li>
+					<li><a href="#">Fabia</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#">Обсуждения</a>
+					</li>
+					<li><a href="#">Популярные</a>
+					</li>
+					<li><a href="#">Новые</a>
+					</li>
+					<li><a href="#">Выбор автомобиля</a>
+					</li>
+					<li><a href="#">Обзоры</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-bottom-info">
+					<p>©2018, Skoda .info</p>
+					<p>Политика конфиденциальности</p>
+					<p>Положение об обработке персональных данных</p>
+				</div>
+				<div class="footer-bottom-social"><a href="#">Facebook<svg class="icon icon-social_footer"><use xlink:href="images/sprite/sprite.svg#icon-fb"></use></svg></a><a href="#">Instagram<svg class="icon icon-social_footer"><use xlink:href="images/sprite/sprite.svg#icon-ig"></use></svg></a>
+					<a
+					href="#">Twitter
+						<svg class="icon icon-social_footer">
+							<use xlink:href="images/sprite/sprite.svg#icon-tw"></use>
+						</svg>
+						</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--modal-sign-in-->
+	<div class="modal-popup modal-popup_signin">
+		<button class="btn-close">
+			<svg class="icon close-modal">
+				<use xlink:href="images/sprite/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="modal__title">Вход на портал</div>
+		<div class="modal__text">Выполните вход, чтобы получить возможность комментировать и участвовать в обсуждениях.</div><a class="modal__link" href="#">Нет аккаунта?</a>
+		<form class="form form-signin">
+			<div class="form-group">
+				<input class="modal__input" type="text" placeholder="Логин (E-mail)" required>
+				<label>Логин(Email)</label>
+			</div>
+			<div class="form-group">
+				<input class="modal__input" type="password" placeholder="Пароль" required>
+				<label>Пароль</label>
+			</div>
+			<label class="checkbox">
+				<input class="checkbox__input" type="checkbox" required><span class="checkbox__label">Запомнить меня</span>
+			</label><a class="modal__link" href="#">Забыл пароль</a>
+			<button class="btn btn_primary btn_uppercase" type="submit">Вход на портал</button>
+		</form>
+		<div class="modal__text">Войти через соц. сети:</div>
+		<div class="modal-socials">
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-fb"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-tw"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-vk"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-ok"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<!--modal-signup-->
+	<div class="modal-popup modal-popup_signup">
+		<button class="btn-close">
+			<svg class="icon close-modal">
+				<use xlink:href="images/sprite/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="modal__title">Регистрация</div>
+		<div class="modal__text">Зарегистрируйтесь, чтобы получить возможность комментировать и участвовать в обсуждениях.</div><a class="modal__link" href="#">У меня уже есть аккаунт</a>
+		<form class="form" id="form-signup">
+			<div class="form-group">
+				<input class="modal__input" type="text" name="form_name" placeholder="Логин (E-mail)" required>
+				<label>Логин(Email)</label>
+			</div>
+			<div class="form-group">
+				<input class="modal__input" type="password" name="pass" placeholder="Пароль" required>
+				<label>Пароль</label>
+			</div>
+			<div class="form-group">
+				<input class="modal__input" type="password" name="pass2" placeholder="Повторите пароль" required>
+				<label>Повторите пароль</label>
+			</div>
+			<label class="checkbox">
+				<input class="checkbox__input" type="checkbox" required><span class="checkbox__label">Даю согласие на<a href="#"> обработку персональных данных</a></span>
+			</label>
+			<button class="btn btn_primary btn_uppercase" type="submit">Зарегистрироваться</button>
+		</form>
+		<div class="modal__text">Войти через соц. сети:</div>
+		<div class="modal-socials">
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-fb"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-tw"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-vk"></use>
+				</svg>
+			</a>
+			<a href="#">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#icon-ok"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<div class="modal-overlay"></div>
+	<div class="modal modal-menu">
+		<button class="icon-close"></button>
+		<div class="container"><a class="modal-menu__link" href="#">Автомобили</a><a class="modal-menu__link" href="#">Новости</a><a class="modal-menu__link" href="#">Обзоры</a><a class="modal-menu__link" href="#">Двигатели</a><a class="modal-menu__link" href="#">Фото</a><a class="modal-menu__link"
+			href="#">Обсуждения</a>
+		</div>
+	</div>
+	<!--jquery-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<div class="pages" id="pages-22">
+		<div class="pages-header" id="toogle-23">
+			<p>Навигация страниц верстки</p><span>GP</span><i class="icon-pages" id="close-24"></i>
+		</div>
+		<ul>
+			<li><a href="./">Главная</a>
+			</li>
+			<li><a href="cars.html">Машины</a>
+			</li>
+			<li><a href="car-reviews.html">car-reviews</a>
+			</li>
+			<li><a href="reviews.html">reviews</a>
+			</li>
+			<li><a href="discussion.html">Обсуждения</a>
+			</li>
+			<li><a href="discussion-open.html">Открытые Обсуждения</a>
+			</li>
+			<li><a href="engines.html">Двигатели</a>
+			</li>
+			<li><a href="engine.html">Двигатель skoda 1.4 TSI</a>
+			</li>
+			<li><a href="news.html">Новости</a>
+			</li>
+			<li><a href="news-category.html">Новости категории</a>
+			</li>
+			<li><a href="news-inner.html">news-inner</a>
+			</li>
+			<li><a href="404.html">404</a>
+			</li>
+			<li><a href="ui.html">UI</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		$('#toogle-23').on('click', function(event) {
+			event.preventDefault();
+			/*Act on the event */
+			$('#pages-22').toggleClass('open');
+		});
+	</script>
+</body>
+
+</html>

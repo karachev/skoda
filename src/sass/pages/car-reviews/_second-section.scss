@@ -1,0 +1,19 @@
+/* ==========================================================================
+  second-section
+  ===========================================================================*/
+.second-section{
+  background: #FBFBFB;
+  p{
+    margin: 0;
+    padding: 50px 0;
+    font-family: $font-family-main;
+    @include font-size(20px);
+    line-height: 29px;
+    color:#000;
+    @include mq('tablet', 'max'){
+      padding: 20px 0;
+      @include font-size(15px);
+    }
+  }
+}
+/* end second-section */

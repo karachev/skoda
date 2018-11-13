@@ -1,0 +1,71 @@
+@import "_functions.scss";
+//
+//1. FONTS
+//
+
+//NEW INCLUDE FONTS FROM MIXIN
+@include font-face('Roboto', '../fonts/RobotoRegular/RobotoRegular', 400, normal, eot woff ttf);
+@include font-face('Oswald', '../fonts/OswaldRegular/OswaldRegular', 400, normal, eot woff ttf);
+@include font-face('Oswald', '../fonts/OswaldLight/OswaldLight', 300, normal, eot woff ttf);
+
+$font-family-main: 'Roboto', 'Times New Roman', serif;
+$font-family-regular: 'Oswald', 'Helvetica', sans-serif;
+
+//SIZE
+$font-size-main: 16px;
+$font-size-h1: 46px;
+$font-size-h2: 35px;
+$font-size-h3: 25px;
+$font-size-link: 22px;
+$font-size-text: 17px;
+$font-size-btn: 24px;
+
+//LINE HEIGHT
+$line-height-main: 1.2;
+
+//WEIGHT
+$font-weight-light: 300;
+$font-weight-main: 400;
+
+//
+//2. COLORS
+//
+$color-white: #fff;
+$color-black: #393939;
+$color-bg-main: #232323;
+$color-grey:#535353;
+$color-main: #4BA82E;
+$color-title: $color-black;
+
+//3. BUTTONS
+$button: (
+	max-width: 100%,
+	min-width: 280px,
+	padding: 0 10px,
+	height: 76px,
+	line-height: 76px,
+	font-family: $font-family-regular,
+	font-size: 16px,
+	font-weight: $font-weight-main,
+);
+
+// 5. @MEDIA QUERIES
+//
+$breakpoints: (
+	"phone":   320px,
+	"tablet-small": 480px,
+	"tablet":       768px,
+	"laptop":      980px,
+	"desktop":      1200px,
+	"desktop-max":      1920px,
+);
+
+//
+// 6. Z-INDEX ELEMENTS
+//
+
+$z-layers: (
+	back: -1,
+	default: 1,
+	button: 3
+);
