@@ -162,7 +162,7 @@ input[type=checkbox] {
   background-color: #232323;
   top: 0;
   left: 0;
-  transform: translate(100%);
+  transform: translate(-100%);
   transition: 0.5s all ease-in;
 
   .container {

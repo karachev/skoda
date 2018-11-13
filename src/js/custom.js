@@ -21,18 +21,28 @@ $(function () {
   $('.gallery-point__item').each(function(index, element) {
     $xCord = $(this).data("x");
     $yCord = $(this).data("y");
-    $(this).find('span').css("top", $yCord);
-    $(this).find('span').css("left", $xCord);
+    $(this).find('span').css("top", $yCord + '%');
+    $(this).find('span').css("left", $xCord + '%');
   
     $(this).find('span').on('click', function () {
       $(".gallery-point__tooltip").removeClass('active');
       $(".gallery-point__tooltip").css('display', 'none');
       $xCord = $(element).data("x");
       $yCord = $(element).data("y");
+      if (Number($xCord) < 50) {
+        $(element).find(".gallery-point__tooltip").css("transform", "translateX(6%)");
+        $(element).find(".gallery-point__tooltip:before").css("transform", "scale(-1, 1);");
+        
+      }
+      if (Number($yCord) > 50) {
+        $(element).find(".gallery-point__tooltip").css("transform", "translateY(-106%)");
+        $(element).find(".gallery-point__tooltip:before").css("transform", "scale(1, -1);");
+      }
+      console.log($yCord + '%');
       $(element).find(".gallery-point__tooltip").css("display", "flex");
       $(element).find(".gallery-point__tooltip").addClass('active');
-      $(element).find(".gallery-point__tooltip").css("top", $yCord);
-      $(element).find(".gallery-point__tooltip").css("left", $xCord);
+      $(element).find(".gallery-point__tooltip").css("top", $yCord + '%');
+      $(element).find(".gallery-point__tooltip").css("left", $xCord + '%');
     });
   });
   

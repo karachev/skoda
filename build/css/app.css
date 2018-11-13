@@ -5368,8 +5368,8 @@ input[type=checkbox]
     height: 100%;
 
     transition: .5s all ease-in;
-    -webkit-transform: translate(100%);
-            transform: translate(100%);
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
 
     background-color: #232323;
 }
@@ -5903,7 +5903,7 @@ input[type=checkbox]
 
 .discussion
 {
-    background: #f0f0f0;
+    background: #f0f0f0 url('../images/logo-bg.svg') no-repeat bottom left 9%;
 }
 
 .discussion-top
@@ -6463,13 +6463,28 @@ input[type=checkbox]
     -webkit-transform: translate(-103%, 6%);
             transform: translate(-103%, 6%);
 
-    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22579%22%20height%3D%22200%22%20viewBox%3D%220%200%20579%20200%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2021v174a5%205%200%200%200%205%205h554a5%205%200%200%200%205-5V35l13.957-33.496c.357-.858-.547-1.697-1.376-1.277L545.5%2016H5a5%205%200%200%200-5%205z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
-    background-repeat: no-repeat;
-    background-size: 100%;
-
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+.gallery-point__tooltip:before
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22579%22%20height%3D%22200%22%20viewBox%3D%220%200%20579%20200%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2021v174a5%205%200%200%200%205%205h554a5%205%200%200%200%205-5V35l13.957-33.496c.357-.858-.547-1.697-1.376-1.277L545.5%2016H5a5%205%200%200%200-5%205z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .gallery-point__tooltip h3

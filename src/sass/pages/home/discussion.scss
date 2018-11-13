@@ -1,5 +1,6 @@
 .discussion {
-  background: #F0F0F0;
+  background: #F0F0F0 url("../images/logo-bg.svg") no-repeat bottom left 9%;
+  //background-image: url("../images/logo-bg.svg");
 
   &-top {
     flex-direction: column;
