@@ -5501,31 +5501,34 @@ $(function () {
     });
   });
   
-  $('.gallery-point__item').each(function(index, element) {
+  $('.gallery-point__item').each(function (index, element) {
     $xCord = $(this).data("x");
     $yCord = $(this).data("y");
     $(this).find('span').css("top", $yCord + '%');
     $(this).find('span').css("left", $xCord + '%');
-  
+    
     $(this).find('span').on('click', function () {
       $(".gallery-point__tooltip").removeClass('active');
       $(".gallery-point__tooltip").css('display', 'none');
       $xCord = $(element).data("x");
       $yCord = $(element).data("y");
-      if (Number($xCord) < 50) {
+      if (Number($xCord) < 55) {
         $(element).find(".gallery-point__tooltip").css("transform", "translateX(6%)");
-        $(element).find(".gallery-point__tooltip:before").css("transform", "scale(-1, 1);");
+        // $(element).find(".gallery-point__tooltip:before").css("transform", "scale(-1, 1);");
+        console.log(1);
         
       }
-      if (Number($yCord) > 50) {
+      if (Number($yCord) > 45) {
         $(element).find(".gallery-point__tooltip").css("transform", "translateY(-106%)");
-        $(element).find(".gallery-point__tooltip:before").css("transform", "scale(1, -1);");
+        console.log(2);
+        // $(element).find(".gallery-point__tooltip:before").css("transform", "scale(1, -1);");
       }
       console.log($yCord + '%');
       $(element).find(".gallery-point__tooltip").css("display", "flex");
       $(element).find(".gallery-point__tooltip").addClass('active');
       $(element).find(".gallery-point__tooltip").css("top", $yCord + '%');
       $(element).find(".gallery-point__tooltip").css("left", $xCord + '%');
+      // $(element).find(".gallery-point__tooltip::before").css("transform", "scale(1, 1);");
     });
   });
   
@@ -5645,103 +5648,112 @@ $(function () {
   }
 
 //modals
-  var modal=$(".modal-popup_signin"),
-      btnModal = $(".header-buttons__login"),
-      btnCloseModal = $(".btn-close"),
-      overLay = $(".modal-overlay");
-
-  btnModal.on('click', function(event) {
-      event.preventDefault();
-      modal.addClass('open');
-  });
-
-  btnCloseModal.on('click', function(event) {
-      event.preventDefault();
-      modal.removeClass('open');
-  });
-
-  overLay.on('click', function(event) {
-      event.preventDefault();
-      modal.removeClass('open');
-  });
-
-//signup
-
-  var modal=$(".modal-popup_signup"),
-      btnModal = $(".header-buttons__registration"),
-      btnCloseModal = $(".btn-close"),
-      overLay = $(".modal-overlay");
-
-  btnModal.on('click', function(event) {
-      event.preventDefault();
-      modal.addClass('open');
-  });
-
-  btnCloseModal.on('click', function(event) {
-      event.preventDefault();
-      modal.removeClass('open');
-  });
-
-  overLay.on('click', function(event) {
-      event.preventDefault();
-      modal.removeClass('open');
-  });
-
-
-    overLay.on('click', function(event) {
-        event.preventDefault();
-        modal.removeClass('open');
+  var modalSignin = $(".modal-popup_signin"),
+    btnModalSignin = $(".header-buttons__login"),
+    btnCloseModal = $(".btn-close"),
+    overLay = $(".modal-overlay");
+  
+  btnModalSignin.on('click', function (event) {
+    event.preventDefault();
+    modalSignin.addClass('open');
+    $(document).keydown(function (evt) {
+      if (evt.keyCode === 27) {
+        modalSignin.removeClass('open');
+      }
     });
+  });
+  
+  btnCloseModal.on('click', function (event) {
+    event.preventDefault();
+    modalSignin.removeClass('open');
+    modalRegistration.removeClass('open');
+  });
+  
+  overLay.on('click', function (event) {
+    event.preventDefault();
+    modalSignin.removeClass('open');
+    modalRegistration.removeClass('open');
+  });
+  
+  var modalRegistration = $(".modal-popup_registration"),
+    btnModalRegistration = $(".header-buttons__registration");
+  
+  btnModalRegistration.on('click', function (event) {
+    event.preventDefault();
+    modalRegistration.addClass('open');
+    $(document).keydown(function (evt) {
+      if (evt.keyCode === 27) {
+        modalRegistration.removeClass('open');
+      }
+    });
+  });
+  
   
   $('.filter-model').SumoSelect({
-    captionFormat:'{0} Выбрано',
-    captionFormatAllSelected:'Комплектация:  {0} все выбраны!',
+    captionFormat: '{0} Выбрано',
+    captionFormatAllSelected: 'Комплектация:  {0} все выбраны!',
     okCancelInMulti: true,
     locale: ['Применить', 'Сбросить'],
   });
   
   $('.filter-complect').SumoSelect({
-    captionFormat:'{0} Выбрано',
-    captionFormatAllSelected:'Комплектация:  {0} все выбраны!',
+    captionFormat: '{0} Выбрано',
+    captionFormatAllSelected: 'Комплектация:  {0} все выбраны!',
     okCancelInMulti: true,
     locale: ['Применить', 'Сбросить'],
   });
   
   $('.filter-engine').SumoSelect({
-    captionFormat:'{0} Выбрано',
-    captionFormatAllSelected:'Комплектация:  {0} все выбраны!',
+    captionFormat: '{0} Выбрано',
+    captionFormatAllSelected: 'Комплектация:  {0} все выбраны!',
     okCancelInMulti: true,
     locale: ['Применить', 'Сбросить'],
   });
   
   $('.filter-sort').SumoSelect({
-    captionFormat:'{0} Выбрано',
-    captionFormatAllSelected:'Комплектация:  {0} все выбраны!',
+    captionFormat: '{0} Выбрано',
+    captionFormatAllSelected: 'Комплектация:  {0} все выбраны!',
     okCancelInMulti: true,
     locale: ['Применить', 'Сбросить'],
   });
-
+  
   //JQ-validate
-
-    $("#form-signup").validate({
-
-        rules: {
-            form_name: {
-                required:true
-            },
-            pass:{
-                required:true
-            },
-            pass2:{
-              required:true
-            }
-        },
-        messages:{
-            form_name: "Заполните это поле",
-            pass:"Заполните это поле",
-            pass2:"Заполните это поле"
-        }
-    });
+  
+  $("#form-signup").validate({
+    
+    rules: {
+      form_name: {
+        required: true
+      },
+      pass1: {
+        required: true
+      },
+      pass2: {
+        required: true
+      }
+    },
+    messages: {
+      form_name: "Введите email",
+      pass1: "Введите пароль",
+      pass2: "Повторите пароль"
+    }
+  });
+  
+  $("#form-signin").validate({
+    
+    rules: {
+      form_name2: {
+        required: true
+      },
+      pass3: {
+        required: true
+      }
+    },
+    messages: {
+      form_name2: "Введите email",
+      pass3: "Введите пароль"
+    }
+  });
 });
 
 

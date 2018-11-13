@@ -6,12 +6,12 @@
     .modal__title Вход на портал
     .modal__text Выполните вход, чтобы получить возможность комментировать и участвовать в обсуждениях.
     a(href="#").modal__link Нет аккаунта?
-    form.form.form-signin
+    form.form#form-signin
         .form-group
-            input.modal__input(type="text", placeholder="Логин (E-mail)", required)
+            input.modal__input(type="text", name="form_name2", placeholder="Логин (E-mail)")
             label Логин(Email)
         .form-group
-            input.modal__input(type="password", placeholder="Пароль", required)
+            input.modal__input(type="password", name="pass3", placeholder="Пароль")
             label Пароль
         label.checkbox
             input.checkbox__input(type='checkbox' required)
@@ -33,7 +33,7 @@
             svg.icon
                 use(xlink:href='images/sprite/sprite.svg#icon-ok')
 //modal-signup
-.modal-popup.modal-popup_signup
+.modal-popup.modal-popup_registration
     button.btn-close
         svg.icon.close-modal
             use(xlink:href='images/sprite/sprite.svg#icon-close')
@@ -42,16 +42,16 @@
     a(href="#").modal__link У меня уже есть аккаунт
     form.form#form-signup
         .form-group
-            input.modal__input(type="text", name="form_name", placeholder="Логин (E-mail)", required)
+            input.modal__input(type="email", name="form_name", placeholder="Логин (E-mail)")
             label Логин(Email)
         .form-group
-            input.modal__input(type="password", name="pass", placeholder="Пароль", required)
+            input.modal__input(id="pass1", type="password",  name="pass1", placeholder="Пароль")
             label Пароль
         .form-group
-            input.modal__input(type="password", name="pass2", placeholder="Повторите пароль", required)
+            input.modal__input(id="pass2", type="password", name="pass2",equalto="#pass1", placeholder="Повторите пароль")
             label Повторите пароль
         label.checkbox
-            input.checkbox__input(type='checkbox' required)
+            input.checkbox__input(type='checkbox')
             span.checkbox__label Даю согласие на
                 a(href="#")  обработку персональных данных
         button.btn.btn_primary.btn_uppercase(type="submit") Зарегистрироваться

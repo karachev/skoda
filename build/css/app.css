@@ -5126,16 +5126,6 @@ button[type='button']
    MODAL
    ===========================================================================*/
 
-.modal-popup_signin
-{
-    display: none;
-}
-
-.modal-popup_signup
-{
-    display: none;
-}
-
 .modal-popup
 {
     position: fixed;
@@ -5143,6 +5133,8 @@ button[type='button']
     top: 50%;
     right: 0;
     left: 0;
+
+    display: none;
 
     width: 562px;
     height: auto;
@@ -5245,6 +5237,8 @@ button[type='button']
 .form-group label
 {
     position: absolute;
+
+    display: none;
 }
 
 .modal__input
@@ -5492,7 +5486,7 @@ input[type=checkbox]
     background-color: #000;
 }
 
-.modal-popup.open + .modal-overlay
+.modal-popup.open ~ .modal-overlay
 {
     visibility: visible;
 
@@ -5502,12 +5496,14 @@ input[type=checkbox]
     opacity: .8;
 }
 
-.modal-popup_signup .modal__text
+.modal-popup_signup .modal__text,
+.modal-popup_registration .modal__text
 {
     width: 80%;
 }
 
-.modal-popup_signup .checkbox
+.modal-popup_signup .checkbox,
+.modal-popup_registration .checkbox
 {
     width: 100%;
 }
@@ -10151,9 +10147,44 @@ input[type=checkbox]
         font-size: 0;
     }
 
+    .modal-popup .btn
+    {
+        margin-top: 20px;
+    }
+
     .modal-popup
     {
         width: 100%;
+        padding: 20px 15px;
+    }
+
+    .btn-close
+    {
+        top: 20px;
+        right: 19px;
+    }
+
+    .modal__title
+    {
+        font-size: 25px;
+        font-size: 1.5625rem;
+    }
+
+    .modal__text
+    {
+        width: 100%;
+        margin-top: 17px;
+    }
+
+    .modal__link
+    {
+        font-size: 15px;
+        font-size: .9375rem;
+    }
+
+    .modal__input
+    {
+        height: 54px;
     }
 
     .home-slider img

@@ -1,13 +1,9 @@
 /* ==========================================================================
    MODAL
    ===========================================================================*/
-.modal-popup_signin{
-  display: none;
-}
-.modal-popup_signup{
-  display: none;
-}
+
 .modal-popup{
+  display: none;
   padding: 36px;
   position: fixed;
   top:50%;
@@ -23,12 +19,16 @@
     margin-top: 40px;
     width: 100%;
     text-transform: uppercase;
+    @include mq('tablet-small', 'max'){
+      margin-top: 20px;
+    }
   }
   @include mq('tablet', 'max'){
     width: 80%;
   }
   @include mq('tablet-small', 'max'){
     width: 100%;
+    padding: 20px 15px;
   }
 }
 .btn-close{
@@ -41,6 +41,10 @@
   background: url("../svg/icon-close.svg");
   border:none;
   cursor: pointer;
+  @include mq('tablet-small', 'max'){
+    top: 20px;
+    right: 19px;
+  }
 }
 .icon.close-modal{
   width: 32px;
@@ -58,7 +62,9 @@
   font-family: $font-family-regular;
   color:$color-black;
   text-transform: uppercase;
-
+  @include mq('tablet-small', 'max'){
+    @include font-size(25px);
+  }
 }
 .modal__text{
   margin-top: 30px;
@@ -67,6 +73,10 @@
   @include font-size(15px);
   opacity: .4;
   color:$color-black;
+  @include mq('tablet-small', 'max'){
+    margin-top: 17px;
+    width: 100%;
+  }
 }
 .modal__link{
   color:#4BA82E;
@@ -75,12 +85,16 @@
   &:hover{
     text-decoration: none;
   }
+  @include mq('tablet-small', 'max'){
+    @include font-size(15px);
+  }
 }
 .form-group{
   position: relative;
   margin-top: 20px;
   label{
     position: absolute;
+    display: none;
   }
 }
 .modal__input{
@@ -93,6 +107,9 @@
   text-transform: uppercase;
   &:focus{
     border:2px solid #4BA82E;
+  }
+  @include mq('tablet-small', 'max'){
+    height: 54px;
   }
 }
 //checkbox
@@ -246,16 +263,18 @@ input[type=checkbox] {
   pointer-events: none;
   transition: all .3s;
 }
-.modal-popup.open+.modal-overlay{
+.modal-popup.open ~ .modal-overlay{
   opacity: .8;
   visibility: visible;
   pointer-events: auto;
   transition: all .3s;
 }
 
+
 //modal-signup
 
-.modal-popup_signup{
+.modal-popup_signup,
+.modal-popup_registration{
   .modal__text{
     width: 80%;
   }

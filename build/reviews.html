@@ -493,13 +493,13 @@
 		</button>
 		<div class="modal__title">Вход на портал</div>
 		<div class="modal__text">Выполните вход, чтобы получить возможность комментировать и участвовать в обсуждениях.</div><a class="modal__link" href="#">Нет аккаунта?</a>
-		<form class="form form-signin">
+		<form class="form" id="form-signin">
 			<div class="form-group">
-				<input class="modal__input" type="text" placeholder="Логин (E-mail)" required>
+				<input class="modal__input" type="text" name="form_name2" placeholder="Логин (E-mail)">
 				<label>Логин(Email)</label>
 			</div>
 			<div class="form-group">
-				<input class="modal__input" type="password" placeholder="Пароль" required>
+				<input class="modal__input" type="password" name="pass3" placeholder="Пароль">
 				<label>Пароль</label>
 			</div>
 			<label class="checkbox">
@@ -532,7 +532,7 @@
 		</div>
 	</div>
 	<!--modal-signup-->
-	<div class="modal-popup modal-popup_signup">
+	<div class="modal-popup modal-popup_registration">
 		<button class="btn-close">
 			<svg class="icon close-modal">
 				<use xlink:href="images/sprite/sprite.svg#icon-close"></use>
@@ -542,19 +542,19 @@
 		<div class="modal__text">Зарегистрируйтесь, чтобы получить возможность комментировать и участвовать в обсуждениях.</div><a class="modal__link" href="#">У меня уже есть аккаунт</a>
 		<form class="form" id="form-signup">
 			<div class="form-group">
-				<input class="modal__input" type="text" name="form_name" placeholder="Логин (E-mail)" required>
+				<input class="modal__input" type="email" name="form_name" placeholder="Логин (E-mail)">
 				<label>Логин(Email)</label>
 			</div>
 			<div class="form-group">
-				<input class="modal__input" type="password" name="pass" placeholder="Пароль" required>
+				<input class="modal__input" id="pass1" type="password" name="pass1" placeholder="Пароль">
 				<label>Пароль</label>
 			</div>
 			<div class="form-group">
-				<input class="modal__input" type="password" name="pass2" placeholder="Повторите пароль" required>
+				<input class="modal__input" id="pass2" type="password" name="pass2" equalto="#pass1" placeholder="Повторите пароль">
 				<label>Повторите пароль</label>
 			</div>
 			<label class="checkbox">
-				<input class="checkbox__input" type="checkbox" required><span class="checkbox__label">Даю согласие на<a href="#"> обработку персональных данных</a></span>
+				<input class="checkbox__input" type="checkbox"><span class="checkbox__label">Даю согласие на<a href="#"> обработку персональных данных</a></span>
 			</label>
 			<button class="btn btn_primary btn_uppercase" type="submit">Зарегистрироваться</button>
 		</form>
