@@ -30,6 +30,11 @@
     width: 100%;
     padding: 20px 15px;
   }
+  .checkbox {
+    @include mq('tablet', 'max') {
+      width: 185px;
+    }
+  }
 }
 .btn-close{
   position: absolute;
@@ -261,7 +266,6 @@ input[type=checkbox] {
   opacity: .7;
   visibility: hidden;
   pointer-events: none;
-  transition: all .3s;
 }
 .modal-popup.open ~ .modal-overlay{
   opacity: .8;

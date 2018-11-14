@@ -42,6 +42,13 @@
     }
   }
 
+  &-meta {
+    @include mq('tablet', 'max') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   &__label {
     margin-right: 10px;
     font-family: $font-family-main;

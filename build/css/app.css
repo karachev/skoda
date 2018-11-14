@@ -5483,7 +5483,6 @@ input[type=checkbox]
     width: 100%;
     height: 100%;
 
-    transition: all .3s;
     pointer-events: none;
 
     opacity: .7;
@@ -9870,6 +9869,11 @@ input[type=checkbox]
         width: 80%;
     }
 
+    .modal-popup .checkbox
+    {
+        width: 185px;
+    }
+
     .filters-wrap
     {
         padding: 10px 12px;
@@ -10079,6 +10083,13 @@ input[type=checkbox]
 
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    }
+
+    .review-slider-meta
+    {
+        width: 100%;
+
+        text-align: center;
     }
 
     .section-notfound
