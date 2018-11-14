@@ -1,0 +1,115 @@
+.filter-tabs {
+  margin-top: 20px;
+  @include mq('laptop', 'max') {
+    margin-top: 8px;
+  }
+  .container {
+    padding-left: 9px;
+    display: flex;
+    @include mq('laptop', 'max') {
+      display: block;
+      overflow: hidden;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+  }
+  input[type=radio] {
+    display: none;
+  }
+  &-top {
+    margin-bottom: 30px;
+    @include mq('laptop', 'max') {
+      margin-bottom: 25px;
+    }
+  }
+  &-bottom {
+    margin-bottom: 46px;
+    @include mq('laptop', 'max') {
+      margin-bottom: 30px;
+    }
+  }
+  label {
+    margin-right: 54px;
+    padding-bottom: 14px;
+    font-family: $font-family-regular;
+    font-size: 22px;
+    line-height: 33px;
+    opacity: 0.5;
+    color: $color-black;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    @include mq('laptop', 'max') {
+      margin-right: 37px;
+      padding-bottom: 10px;
+      font-size: 18px;
+      line-height: 27px;
+    }
+    @include mq('tablet', 'max') {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &:first-of-type {
+      margin-left: 16px;
+      @include mq('tablet', 'max') {
+        margin-left: 7px;
+      }
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  input[type=radio]:checked + label {
+    position: relative;
+    opacity: 1;
+    transition: all 0.2s ease-in;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 5px;
+      background-color: $color-main;
+      @include mq('tablet', 'max') {
+        bottom: 0;
+        height: 3px;
+      }
+    }
+  }
+
+  &-top,
+  &-bottom {
+    border-bottom: 1px solid #D6D6D6;
+  }
+
+  &-bottom {
+    label {
+      margin-right: 40px;
+      padding-bottom: 11px;
+      font-weight: $font-weight-light;
+      font-size: 17px;
+      line-height: 25px;
+      @include mq('laptop', 'max') {
+        margin-right: 17px;
+        padding-bottom: 8px;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: -0.3px;
+      }
+      @include mq('tablet', 'max') {
+        margin-right: 21px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+}

@@ -3347,17 +3347,6 @@ button[type='button']
     display: none;
 }
 
-.header--mobile .container
-{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
 .header__btn-menu
 {
     padding: 15px 15px 15px 0;
@@ -3647,6 +3636,21 @@ button[type='button']
 .header-search:hover input[placeholder]
 {
     background-color: #eaeaea;
+}
+
+.header-search--mobile
+{
+    padding-right: 15px;
+}
+
+.header-search--mobile:hover .header__search svg
+{
+    fill: #393939;
+}
+
+.header__btn-menu
+{
+    padding-left: 15px;
 }
 
 /* end header */
@@ -5923,6 +5927,108 @@ input[type=checkbox]
 .discussion .swiper-pagination-bullet-active
 {
     background: #4ba82e;
+}
+
+.filter-tabs
+{
+    margin-top: 20px;
+}
+
+.filter-tabs .container
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    padding-left: 9px;
+}
+
+.filter-tabs input[type=radio]
+{
+    display: none;
+}
+
+.filter-tabs-top
+{
+    margin-bottom: 30px;
+}
+
+.filter-tabs-bottom
+{
+    margin-bottom: 46px;
+}
+
+.filter-tabs label
+{
+    font-family: 'Oswald', 'Helvetica', sans-serif;
+    font-size: 22px;
+    line-height: 33px;
+
+    margin-right: 54px;
+    padding-bottom: 14px;
+
+    cursor: pointer;
+    transition: all .2s ease-in;
+    text-transform: uppercase;
+
+    opacity: .5;
+    color: #393939;
+}
+
+.filter-tabs label:first-of-type
+{
+    margin-left: 16px;
+}
+
+.filter-tabs label:last-of-type
+{
+    margin-right: 0;
+}
+
+.filter-tabs input[type=radio]:checked + label
+{
+    position: relative;
+
+    transition: all .2s ease-in;
+
+    opacity: 1;
+}
+
+.filter-tabs input[type=radio]:checked + label:after
+{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 5px;
+
+    content: '';
+
+    background-color: #4ba82e;
+}
+
+.filter-tabs-top,
+.filter-tabs-bottom
+{
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.filter-tabs-bottom label
+{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 25px;
+
+    margin-right: 40px;
+    padding-bottom: 11px;
+}
+
+.filter-tabs-bottom label:last-of-type
+{
+    margin-right: 0;
 }
 
 .discussions--with-bg
@@ -9441,6 +9547,50 @@ input[type=checkbox]
         width: 738px;
     }
 
+    .filter-tabs
+    {
+        margin-top: 8px;
+    }
+
+    .filter-tabs .container
+    {
+        display: block;
+        overflow: hidden;
+        overflow-x: scroll;
+
+        white-space: nowrap;
+    }
+
+    .filter-tabs-top
+    {
+        margin-bottom: 25px;
+    }
+
+    .filter-tabs-bottom
+    {
+        margin-bottom: 30px;
+    }
+
+    .filter-tabs label
+    {
+        font-size: 18px;
+        line-height: 27px;
+
+        margin-right: 37px;
+        padding-bottom: 10px;
+    }
+
+    .filter-tabs-bottom label
+    {
+        font-size: 15px;
+        line-height: 22px;
+
+        margin-right: 17px;
+        padding-bottom: 8px;
+
+        letter-spacing: -.3px;
+    }
+
     .gallery .gallery-for .slick-slide
     {
         width: 738px;
@@ -9527,9 +9677,15 @@ input[type=checkbox]
 
     .header--mobile
     {
-        display: block;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
 
         background-color: #232323;
+
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
     }
 
     .footer-nav ul
@@ -9782,6 +9938,38 @@ input[type=checkbox]
     .discussion .swiper-pagination
     {
         bottom: -68px;
+    }
+
+    .filter-tabs label
+    {
+        font-size: 16px;
+        line-height: 24px;
+
+        display: inline-block;
+
+        margin-right: 20px;
+
+        vertical-align: top;
+    }
+
+    .filter-tabs label:first-of-type
+    {
+        margin-left: 7px;
+    }
+
+    .filter-tabs input[type=radio]:checked + label:after
+    {
+        bottom: 0;
+
+        height: 3px;
+    }
+
+    .filter-tabs-bottom label
+    {
+        font-size: 14px;
+        line-height: 21px;
+
+        margin-right: 21px;
     }
 
     .reviews-item

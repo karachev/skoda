@@ -26,16 +26,17 @@ header.header
                     input(type="search", placeholder="Поиск по публикациям")
                     input(type="submit", placeholder="Поиск")
     .header--mobile
-        .container
-            button.header__btn-menu(aria-label="Меню")
-                svg.icon
-                    use(xlink:href='images/sprite/sprite.svg#menu-button')
-            a.header__logo(href="./", aria-label="Логотип Skoda")
-                svg.icon
-                    use(xlink:href='images/sprite/sprite.svg#footer-logo')
-            button.header__registration(aria-label="Кнопка регистрации")
-                svg.icon
-                    use(xlink:href='images/sprite/sprite.svg#person-mobile')
-            button.header__search(aria-label="Кнопка поиска")
+        button.header__btn-menu(aria-label="Меню")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#menu-button')
+        a.header__logo(href="./", aria-label="Логотип Skoda")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#footer-logo')
+        button.header__registration(aria-label="Кнопка регистрации")
+            svg.icon
+                use(xlink:href='images/sprite/sprite.svg#person-mobile')
+        form.header-search.header-search--mobile
+            input(type="search", placeholder="Поиск по публикациям")
+            button.header__search(aria-label="Кнопка поиска", type='submit')
                 svg.icon
                     use(xlink:href='images/sprite/sprite.svg#icon-search')

@@ -55,28 +55,29 @@
 			</div>
 		</div>
 		<div class="header--mobile">
-			<div class="container">
-				<button class="header__btn-menu" aria-label="Меню">
-					<svg class="icon">
-						<use xlink:href="images/sprite/sprite.svg#menu-button"></use>
-					</svg>
-				</button>
-				<a class="header__logo" href="./" aria-label="Логотип Skoda">
-					<svg class="icon">
-						<use xlink:href="images/sprite/sprite.svg#footer-logo"></use>
-					</svg>
-				</a>
-				<button class="header__registration" aria-label="Кнопка регистрации">
-					<svg class="icon">
-						<use xlink:href="images/sprite/sprite.svg#person-mobile"></use>
-					</svg>
-				</button>
-				<button class="header__search" aria-label="Кнопка поиска">
+			<button class="header__btn-menu" aria-label="Меню">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#menu-button"></use>
+				</svg>
+			</button>
+			<a class="header__logo" href="./" aria-label="Логотип Skoda">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#footer-logo"></use>
+				</svg>
+			</a>
+			<button class="header__registration" aria-label="Кнопка регистрации">
+				<svg class="icon">
+					<use xlink:href="images/sprite/sprite.svg#person-mobile"></use>
+				</svg>
+			</button>
+			<form class="header-search header-search--mobile">
+				<input type="search" placeholder="Поиск по публикациям">
+				<button class="header__search" aria-label="Кнопка поиска" type="submit">
 					<svg class="icon">
 						<use xlink:href="images/sprite/sprite.svg#icon-search"></use>
 					</svg>
 				</button>
-			</div>
+			</form>
 		</div>
 	</header>
 	<!--main-->
@@ -201,15 +202,29 @@
 				<div class="container container-flex">
 					<h2 class="cards__title discussion__title h2">Обсуждения</h2><a class="cards__link discussion__link">Все Обсуждения</a>
 				</div>
-				<div class="tabs">
-					<div class="tabs-top">
-						<div class="container"><a class="tabs-item" data-tab-top="popular">Популярные</a><a class="tabs-item" data-tab-top="new">Самые новые</a>
+				<div class="filter-tabs">
+					<div class="filter-tabs-top">
+						<div class="container">
+							<input type="radio" id="sort-popular" name="sort-discussion-top" value="Популярные" checked="checked">
+							<label for="sort-popular">Популярные</label>
+							<input type="radio" id="sort-new" name="sort-discussion-top" value="Самые новые">
+							<label for="sort-new">Самые новые</label>
 						</div>
 					</div>
-					<div class="tabs-bottom">
-						<div class="container"><a class="tabs-item" data-tab-bottom="term">Все темы</a><a class="tabs-item" data-tab-bottom="engine">Про двигатели</a><a class="tabs-item" data-tab-bottom="car">Про Автомобили</a><a class="tabs-item" data-tab-bottom="about-new">Про новинки</a>
-							<a
-							class="tabs-item" data-tab-bottom="discussion">Обзоры</a><a class="tabs-item" data-tab-bottom="selection">выбор авто</a>
+					<div class="filter-tabs-bottom">
+						<div class="container">
+							<input type="radio" id="sort-term" name="sort-discussion-bottom" value="Все темы" checked="checked">
+							<label for="sort-term">Все темы</label>
+							<input type="radio" id="sort-engine" name="sort-discussion-bottom" value="Про двигатели">
+							<label for="sort-engine">Про двигатели</label>
+							<input type="radio" id="sort-car" name="sort-discussion-bottom" value="Про Автомобили">
+							<label for="sort-car">Про Автомобили</label>
+							<input type="radio" id="sort-about-new" name="sort-discussion-bottom" value="Про новинки">
+							<label for="sort-about-new">Про новинки</label>
+							<input type="radio" id="sort-about-discussion" name="sort-discussion-bottom" value="Обзоры">
+							<label for="sort-about-discussion">Обзоры</label>
+							<input type="radio" id="sort-selection" name="sort-discussion-bottom" value="выбор авто">
+							<label for="sort-selection">выбор авто</label>
 						</div>
 					</div>
 				</div>

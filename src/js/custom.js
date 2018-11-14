@@ -166,7 +166,10 @@ $(function () {
 
 //modals
   var modalSignin = $(".modal-popup_signin"),
+    modalRegistration = $(".modal-popup_registration"),
+    btnModalRegistration = $(".header-buttons__registration"),
     btnModalSignin = $(".header-buttons__login"),
+    btnModalSigninMobile = $(".header__registration"),
     btnCloseModal = $(".btn-close"),
     overLay = $(".modal-overlay");
   
@@ -180,6 +183,11 @@ $(function () {
     });
   });
   
+  btnModalSigninMobile.on('click', function (event) {
+    event.preventDefault();
+    modalSignin.addClass('open');
+  });
+  
   btnCloseModal.on('click', function (event) {
     event.preventDefault();
     modalSignin.removeClass('open');
@@ -191,9 +199,6 @@ $(function () {
     modalSignin.removeClass('open');
     modalRegistration.removeClass('open');
   });
-  
-  var modalRegistration = $(".modal-popup_registration"),
-    btnModalRegistration = $(".header-buttons__registration");
   
   btnModalRegistration.on('click', function (event) {
     event.preventDefault();
