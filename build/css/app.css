@@ -2913,6 +2913,140 @@ button.swiper-pagination-bullet
     text-decoration: underline;
 }
 
+/* www.menucool.com/tooltip/javascript-tooltip */
+
+/*For tooltip target element that has set class="tooltip" */
+
+.tooltip
+{
+    text-decoration: none;
+
+    color: #004b6b;
+    border-bottom: 1px dotted #004b6b;
+    outline: none;
+}
+
+/*For tooltip box*/
+
+#mcTooltip
+{
+    background-color: #fff;
+}
+
+#mcTooltip.no-padding
+{
+    padding: 0;
+}
+
+/* For hyperlink within tooltip */
+
+#mcTooltip a
+{
+    color: #069;
+}
+
+/*Close button. Available when sticky or overlay has been set to true, or is on touch-enabled devices. */
+
+#mcttCloseButton
+{
+    display: none !important;
+
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    margin-right: 2px;
+
+    border-radius: 4px;
+    background: black;
+}
+
+/*Close button X symbol*/
+
+#mcttCloseButton:after
+{
+    font: normal 38px/18px arial, sans-serif;
+
+    top: 0;
+    left: -2px;
+
+    color: white;
+}
+
+/*Give the close button a bigger size on smaller devices*/
+
+/* Useful when overlay has been set to true or 1 in JS */
+
+#mcOverlay
+{
+    z-index: 4;
+    top: 0;
+    left: 0;
+
+    display: none;
+    overflow: visible;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#mcTooltip img
+{
+    vertical-align: middle;
+
+    border: 0;
+}
+
+/*The settings below should remain unchanged*/
+
+#mcTooltipWrapper
+{
+    position: absolute;
+    z-index: 9999999999;
+    top: -2000px;
+
+    visibility: hidden;
+    overflow: visible;
+}
+
+#mcTooltip
+{
+    position: relative;
+
+    float: left;
+    overflow: hidden;
+
+    border-style: solid;
+}
+
+.mcTooltipInner
+{
+    position: relative;
+
+    float: left;
+
+    width: auto;
+    height: auto;
+    max-height: 250px;
+}
+
+#mcttCo,
+#mcttCo b
+{
+    position: absolute;
+
+    overflow: hidden;
+}
+
+/*compatible with bootstrap*/
+
+#mcTooltip,
+#mcTooltip div
+{
+    box-sizing: content-box;
+}
+
 /*==========================================================================
 	 GLOBAL STYLES
 	 ===========================================================================*/
@@ -6489,6 +6623,8 @@ input[type=checkbox]
 
 .gallery-point__item span
 {
+    font-size: 0;
+
     position: absolute;
     z-index: 1;
     top: 0;
@@ -6541,27 +6677,13 @@ input[type=checkbox]
     background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M7%200H5v5H0v2h5v5h2V7h5V5H7V0z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
 }
 
-.gallery-point__item p
-{
-    font-size: 14px;
-    line-height: 1.1;
-
-    color: #393939;
-}
-
 .gallery-point__tooltip
 {
-    position: absolute;
-    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 
-    display: none;
-
-    width: 60%;
-    max-width: 580px;
     padding: 35px 35px 26px 20px;
-
-    -webkit-transform: translate(-103%, 6%);
-            transform: translate(-103%, 6%);
 
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -6594,6 +6716,14 @@ input[type=checkbox]
 
     margin: 0;
     margin-bottom: 17px;
+
+    color: #393939;
+}
+
+.gallery-point__tooltip p
+{
+    font-size: 14px;
+    line-height: 1.1;
 
     color: #393939;
 }
@@ -9443,6 +9573,14 @@ input[type=checkbox]
     }
 }
 
+@media screen and (max-width: 979px)
+{
+    .ui-color-block
+    {
+        width: 31.333%;
+    }
+}
+
 @media only screen and (max-width: 979px)
 {
     .header-social__link
@@ -9631,11 +9769,73 @@ input[type=checkbox]
     }
 }
 
-@media screen and (max-width: 979px)
+@media screen and (max-width: 767px)
 {
+    h1,
+    .h1
+    {
+        font-size: 23px;
+        font-size: 1.4375rem;
+    }
+
+    h2,
+    .h2
+    {
+        font-size: 20px;
+        font-size: 1.25rem;
+    }
+
+    h3,
+    .h3
+    {
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+
+    p
+    {
+        font-size: 13px;
+        font-size: .8125rem;
+    }
+
     .ui-color-block
     {
-        width: 31.333%;
+        width: 48%;
+    }
+
+    .pages.open .icon-pages
+    {
+        top: 12px;
+        right: 23px;
+    }
+
+    .pages
+    {
+        background: transparent;
+    }
+
+    .pages .pages-header
+    {
+        float: right;
+
+        width: 60px;
+
+        text-align: center;
+    }
+
+    .pages .pages-header p
+    {
+        font-size: 0;
+    }
+
+    .pages .pages-header span
+    {
+        float: none;
+    }
+
+    .pages ul
+    {
+        background: #eee;
     }
 }
 
@@ -9661,6 +9861,26 @@ input[type=checkbox]
     {
         -webkit-transform: rotate(180deg) translatey(12.5px);
                 transform: rotate(180deg) translatey(12.5px);
+    }
+
+    #mcTooltipWrapper
+    {
+        right: 0 !important;
+        left: 0 !important;
+
+        width: 100%;
+        margin: auto;
+    }
+
+    #mcTooltip
+    {
+        width: 100% !important;
+        min-height: 300px;
+    }
+
+    .mcTooltipInner
+    {
+        width: 100% !important;
     }
 
     .btn,
@@ -10072,6 +10292,32 @@ input[type=checkbox]
         display: none;
     }
 
+    .gallery-point__tooltip-wrap
+    {
+        width: 100%;
+    }
+
+    .gallery-point__tooltip
+    {
+        padding: 12px 12px 8px 6px;
+
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .gallery-point__tooltip h3
+    {
+        width: 100%;
+    }
+
+    .gallery-point__tooltip p
+    {
+        width: 100%;
+    }
+
     .review-slider .slick-slide
     {
         width: 100vw;
@@ -10251,73 +10497,18 @@ input[type=checkbox]
     }
 }
 
-@media screen and (max-width: 767px)
+@media only screen and (max-width: 736px)
 {
-    h1,
-    .h1
+    #mcttCloseButton
     {
-        font-size: 23px;
-        font-size: 1.4375rem;
+        width: 28px;
+        height: 28px;
     }
 
-    h2,
-    .h2
+    #mcttCloseButton:after
     {
-        font-size: 20px;
-        font-size: 1.25rem;
-    }
-
-    h3,
-    .h3
-    {
-        font-size: 18px;
-        font-size: 1.125rem;
-    }
-
-    p
-    {
-        font-size: 13px;
-        font-size: .8125rem;
-    }
-
-    .ui-color-block
-    {
-        width: 48%;
-    }
-
-    .pages.open .icon-pages
-    {
-        top: 12px;
-        right: 23px;
-    }
-
-    .pages
-    {
-        background: transparent;
-    }
-
-    .pages .pages-header
-    {
-        float: right;
-
-        width: 60px;
-
-        text-align: center;
-    }
-
-    .pages .pages-header p
-    {
-        font-size: 0;
-    }
-
-    .pages .pages-header span
-    {
-        float: none;
-    }
-
-    .pages ul
-    {
-        background: #eee;
+        font-size: 48px;
+        line-height: 28px;
     }
 }
 

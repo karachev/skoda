@@ -5,4 +5,5 @@
 @@include('svg4everybody.js')
 @@include('touch-swipe.js')
 @@include('jquery.sumoselect.js')
+@@include('tooltip.js')
 /*END JQUERY PLUGINS*/
