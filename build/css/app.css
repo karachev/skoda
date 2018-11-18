@@ -2949,15 +2949,12 @@ button.swiper-pagination-bullet
 
 #mcttCloseButton
 {
-    display: none !important;
-
     width: 18px;
     height: 18px;
     margin-top: 2px;
     margin-right: 2px;
 
     border-radius: 4px;
-    background: black;
 }
 
 /*Close button X symbol*/
@@ -2967,9 +2964,12 @@ button.swiper-pagination-bullet
     font: normal 38px/18px arial, sans-serif;
 
     top: 0;
-    left: -2px;
+    right: 0;
+    left: 0;
 
-    color: white;
+    margin: auto;
+
+    color: #4ba82e;
 }
 
 /*Give the close button a bigger size on smaller devices*/
@@ -8444,6 +8444,11 @@ input[type=checkbox]
 
 @media only screen and (min-width: 768px)
 {
+    #mcttCloseButton
+    {
+        display: none !important;
+    }
+
     .cards-wrap,
     .gallery-wrap
     {
@@ -10513,7 +10518,7 @@ input[type=checkbox]
 
     #mcttCloseButton:after
     {
-        font-size: 48px;
+        font-size: 37px;
         line-height: 28px;
     }
 }

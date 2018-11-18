@@ -27,21 +27,24 @@
 
 /*Close button. Available when sticky or overlay has been set to true, or is on touch-enabled devices. */
 #mcttCloseButton {
-  display: none !important;
   border-radius: 4px;
   width: 18px;
   height: 18px;
   margin-right: 2px;
   margin-top: 2px;
-  background: black;
+  @include mq('tablet', 'min') {
+    display: none !important;
+  }
 }
 
 /*Close button X symbol*/
 #mcttCloseButton:after {
   font: normal 38px/18px arial, sans-serif;
-  color: white;
+  color: $color-main;
   top: 0;
-  left: -2px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /*Give the close button a bigger size on smaller devices*/
@@ -51,7 +54,7 @@
     height: 28px;
   }
   #mcttCloseButton:after {
-    font-size: 48px;
+    font-size: 37px;
     line-height: 28px;
   }
 }
