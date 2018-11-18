@@ -113,6 +113,9 @@
 #mcttCo, #mcttCo b {
   position: absolute;
   overflow: hidden;
+  @include mq('tablet', 'max') {
+    display: none;
+  }
 }
 
 /*compatible with bootstrap*/

@@ -9883,6 +9883,12 @@ input[type=checkbox]
         width: 100% !important;
     }
 
+    #mcttCo,
+    #mcttCo b
+    {
+        display: none;
+    }
+
     .btn,
     .btn[type='button']
     {
