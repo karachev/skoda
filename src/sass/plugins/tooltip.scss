@@ -83,6 +83,7 @@
   overflow: visible;
   z-index: 9999999999;
   top: -2000px;
+  padding: 15px !important;
   @include mq('tablet', 'max') {
     width: 100%;
     left: 0 !important;

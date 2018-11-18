@@ -3008,6 +3008,8 @@ button.swiper-pagination-bullet
 
     visibility: hidden;
     overflow: visible;
+
+    padding: 15px !important;
 }
 
 #mcTooltip
