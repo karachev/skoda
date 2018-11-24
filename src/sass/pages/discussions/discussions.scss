@@ -21,16 +21,22 @@
   }
 
   &-item__title {
+    display: block;
+    margin-top: 20px;
     margin-bottom: 35px;
     font-family: $font-family-main;
-    line-height: 1;
+    line-height: 1.3;
     font-size: 20px;
+    font-weight: $font-family-regular;
     color: $color-black;
 
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
     text-transform: none;
+    @include mq('desktop', 'max') {
+      margin-top: -6px;
+    }
 
     @include mq('tablet', 'max') {
       margin-bottom: 20px;

@@ -5,11 +5,11 @@ section.ui-section
     .ui-section-body.clearfix
 
 
-        a.card(href="#")
+        .card
             .card-img
                 img(src="uploads/overview-2.jpg", alt="Будущая компактная модель ŠKODA")
                 .card-desc
-                    h2.card-desc__title Будущая компактная модель ŠKODA
+                    a.card-desc__title(href="#") Будущая компактная модель ŠKODA
                     .card-desc-row
                         span.card-desc__label Инсайты
                         span.card-desc__date 15.04.2018
@@ -19,9 +19,9 @@ section.ui-section
         br
         br
 
-        a.card.card--no-img(href="#")
+        .card.card--no-img
             .card-desc
-                h2.card-desc__title Будущая компактная модель ŠKODA
+                a.card-desc__title(href="#") Будущая компактная модель ŠKODA
                 .card-desc-row
                     span.card-desc__label Инсайты
                     span.card-desc__date 15.04.2018
@@ -31,11 +31,11 @@ section.ui-section
         br
         br
 
-        a.car(href="#")
+        .car
             .car-img
                 img(src="uploads/fabia-1.png", alt="Fabia(хЭтчбэк)")
             .car-desc
-                h2.car-desc__title Fabia(хЭтчбэк)
+                a.car-desc__title(href="#") Fabia(хЭтчбэк)
                 p.car-desc__generation 3 поколение
                 p.car-desc__year 2018-н.в.
 
@@ -43,11 +43,11 @@ section.ui-section
         br
         br
 
-        a.review-card(href="#")
+        .review-card
             .review-card-img
                 img(src="uploads/overview-1.jpg", alt="Четырехглазая езда: тест обновленной Skoda Octavia")
             .review-card-desc
-                h2.review-card-desc__title Четырехглазая езда: тест обновленной Skoda Octavia
+                a.review-card-desc__title(href="#") Четырехглазая езда: тест обновленной Skoda Octavia
                 .review-card-desc-row
                     span.review-card-desc__label Обзор
                     span.review-card-desc__date 15.04.2018
@@ -60,9 +60,9 @@ section.ui-section
         br
         br
 
-        a.discussion-card(href="#")
+        .discussion-card
             .discussion-card-meta
-                h2.discussion-card__title
+                a.discussion-card__title(href="#")
                     | Есть ли будущее у ŠKODA KODIAQ RS
                 .discussion-card-buttons
                     span.discussion-card__count-comments 45

@@ -12,15 +12,18 @@
     min-height: 286px;
   }
 
-    &:hover {
+  &:hover {
     text-decoration: none;
   }
 
   .card-wrap {
     height: 100%;
+    transition: all 0.3s ease-in;
     &:hover {
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, .15);
       text-decoration: none;
+      opacity: 1;
+      transition: all 0.3s ease-in;
       &:after {
         display: none;
       }
@@ -50,6 +53,8 @@
     font-size: 20px;
     line-height: 27px;
     color: $color-black;
+    max-height: 55px;
+    overflow: hidden;
     @include mq('tablet', 'max') {
       max-width: 135px;
       font-size: 18px;
@@ -190,6 +195,10 @@
     justify-content: space-between;
   }
 
+  &-ratings__count {
+    color: $color-main;
+  }
+
   &-ratings__like {
     width: 18px;
     height: 18px;
@@ -214,6 +223,8 @@
     font-size: 13px;
     line-height: 17px;
     text-transform: initial;
+    overflow: hidden;
+    max-height: 70px;
     @include mq('desktop', 'max') {
       //width: 350px;
       align-self: center;

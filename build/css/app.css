@@ -2444,14 +2444,6 @@ button.swiper-pagination-bullet
     outline: none;
 }
 
-.SumoSelect:focus > .CaptionCont,
-.SumoSelect:hover > .CaptionCont,
-.SumoSelect.open > .CaptionCont
-{
-    border-color: #7799d0;
-    box-shadow: 0 0 2px #7799d0;
-}
-
 .SumoSelect > .CaptionCont
 {
     position: relative;
@@ -2787,10 +2779,8 @@ button.swiper-pagination-bullet
 
 .SumoSelect > .optWrapper.multiple.okCancelInMulti > .MultiControls > p:focus
 {
-    border-color: #a1c0e4;
     outline: none;
     background-color: #a1c0e4;
-    box-shadow: 0 0 2px #a1c0e4;
 }
 
 .SumoSelect > .optWrapper.multiple > .MultiControls > p
@@ -3467,6 +3457,22 @@ button[type='button']
 
 /* end buttons*/
 
+.visually-hidden
+{
+    display: none;
+}
+
+input,
+button,
+textarea,
+.slick-slide,
+.SelectClass,
+.SumoSelect,
+option
+{
+    outline: none;
+}
+
 /* end global */
 
 /* ==========================================================================
@@ -4117,17 +4123,20 @@ button[type='button']
     width: 384px;
     height: 310px;
     margin-bottom: 18px;
-
-    cursor: pointer;
 }
 
 .card-wrap
 {
+    position: relative;
+
     margin: 0 9px;
+
+    transition: all .3s ease-in;
 }
 
 .card-wrap:hover
 {
+    transition: all .3s ease-in;
     text-decoration: none;
 
     opacity: .75;
@@ -4159,8 +4168,6 @@ button[type='button']
     width: 100%;
     height: 100%;
     padding: 16px 20px;
-
-    pointer-events: none;
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4267,8 +4274,6 @@ button[type='button']
     width: 282px;
     height: auto;
     margin-bottom: 18px;
-
-    cursor: pointer;
 }
 
 .car-wrap
@@ -4276,6 +4281,8 @@ button[type='button']
     height: 100%;
     margin: 0 9px;
     padding: 23px 25px;
+
+    transition: all .3s ease-in;
 
     background-color: #fbfbfb;
 }
@@ -4287,6 +4294,7 @@ button[type='button']
 
 .car:hover .car-wrap
 {
+    transition: all .3s ease-in;
     text-decoration: none;
 
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, .15);
@@ -4299,6 +4307,8 @@ button[type='button']
 
 .car-img
 {
+    display: block;
+
     min-height: 141px;
     margin-bottom: 26px;
 
@@ -4354,7 +4364,7 @@ button[type='button']
     height: auto;
     margin-bottom: 18px;
 
-    cursor: pointer;
+    transition: all .3s ease-in;
 }
 
 .review-card-wrap
@@ -4365,6 +4375,7 @@ button[type='button']
 
 .review-card:hover
 {
+    transition: all .3s ease-in;
     text-decoration: none;
 
     opacity: .75;
@@ -4403,8 +4414,6 @@ button[type='button']
     width: 100%;
     height: 100%;
     padding: 14px 20px;
-
-    pointer-events: none;
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4617,12 +4626,16 @@ button[type='button']
 .discussion-card .card-wrap
 {
     height: 100%;
+
+    transition: all .3s ease-in;
 }
 
 .discussion-card .card-wrap:hover
 {
+    transition: all .3s ease-in;
     text-decoration: none;
 
+    opacity: 1;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, .15);
 }
 
@@ -4655,7 +4668,10 @@ button[type='button']
     font-size: 20px;
     line-height: 27px;
 
+    overflow: hidden;
+
     max-width: 200px;
+    max-height: 55px;
     margin: 0;
 
     color: #393939;
@@ -4833,6 +4849,11 @@ button[type='button']
     justify-content: space-between;
 }
 
+.discussion-card-ratings__count
+{
+    color: #4ba82e;
+}
+
 .discussion-card-ratings__like
 {
     font-size: 0;
@@ -4861,7 +4882,10 @@ button[type='button']
     font-size: 13px;
     line-height: 17px;
 
+    overflow: hidden;
+
     width: 100%;
+    max-height: 70px;
     margin: 0;
     margin-left: 18px;
 
@@ -5247,6 +5271,7 @@ button[type='button']
 
     padding: 2px 14px;
 
+    cursor: pointer;
     text-align: center;
     vertical-align: middle;
     letter-spacing: .03em;
@@ -5386,8 +5411,6 @@ button[type='button']
     width: 100%;
     height: 62px;
     padding: 25px 20px;
-
-    text-transform: uppercase;
 
     border: 2px solid transparent;
     outline: none;
@@ -5675,6 +5698,44 @@ input[type=checkbox]
 
     color: #cd4040;
     border-color: #cd4040;
+}
+
+#check-error
+{
+    position: absolute;
+    bottom: -20px;
+
+    visibility: hidden;
+}
+
+#check-error + .checkbox__label:before
+{
+    border: 2px solid #cd4040;
+}
+
+#check2-error
+{
+    position: absolute;
+    bottom: -20px;
+
+    visibility: hidden;
+}
+
+#check2-error + .checkbox__label:before
+{
+    border: 2px solid #cd4040;
+}
+
+.valid + #check-error + .checkbox__label:before
+{
+    border: none;
+    background: #eaeaea url(../images/icon-checked.svg) no-repeat center;
+}
+
+.valid + #check2-error + .checkbox__label:before
+{
+    border: none;
+    background: #eaeaea url(../images/icon-checked.svg) no-repeat center;
 }
 
 .filters
@@ -6011,7 +6072,12 @@ input[type=checkbox]
     font-weight: 300;
     line-height: 26px;
 
+    position: relative;
+
+    overflow: hidden;
+
     max-width: 420px;
+    max-height: 260px;
     margin: 0;
     margin-bottom: auto;
 
@@ -6188,10 +6254,13 @@ input[type=checkbox]
 {
     font-family: 'Roboto', 'Times New Roman', serif;
     font-size: 20px;
-    line-height: 1;
+    font-weight: 'Oswald', 'Helvetica', sans-serif;
+    line-height: 1.3;
 
+    display: block;
     overflow: hidden;
 
+    margin-top: 20px;
     margin-bottom: 35px;
 
     white-space: nowrap;
@@ -9532,11 +9601,17 @@ input[type=checkbox]
         line-height: 24px;
 
         max-width: 365px;
+        max-height: 240px;
     }
 
     .news-item:nth-of-type(n + 4)
     {
         display: block;
+    }
+
+    .discussions-item__title
+    {
+        margin-top: -6px;
     }
 
     .best-answer
@@ -9699,15 +9774,15 @@ input[type=checkbox]
     .filter-tabs .container
     {
         display: block;
-        overflow: hidden;
-        overflow-x: scroll;
+        overflow-x: auto;
+        overflow-y: hidden;
 
         white-space: nowrap;
     }
 
     .filter-tabs-top
     {
-        margin-bottom: 25px;
+        margin-bottom: 0;
     }
 
     .filter-tabs-bottom
@@ -9720,8 +9795,19 @@ input[type=checkbox]
         font-size: 18px;
         line-height: 27px;
 
+        display: inline-block;
+
         margin-right: 37px;
         padding-bottom: 10px;
+
+        vertical-align: top;
+    }
+
+    .filter-tabs input[type=radio]:checked + label:after
+    {
+        bottom: 0;
+
+        height: 3px;
     }
 
     .filter-tabs-bottom label
@@ -9730,6 +9816,7 @@ input[type=checkbox]
         line-height: 22px;
 
         margin-right: 17px;
+        padding-top: 25px;
         padding-bottom: 8px;
 
         letter-spacing: -.3px;
@@ -10156,6 +10243,8 @@ input[type=checkbox]
         font-size: 13px;
         line-height: 17px;
 
+        max-height: 68px;
+
         text-transform: initial;
     }
 
@@ -10182,23 +10271,12 @@ input[type=checkbox]
         font-size: 16px;
         line-height: 24px;
 
-        display: inline-block;
-
         margin-right: 20px;
-
-        vertical-align: top;
     }
 
     .filter-tabs label:first-of-type
     {
         margin-left: 7px;
-    }
-
-    .filter-tabs input[type=radio]:checked + label:after
-    {
-        bottom: 0;
-
-        height: 3px;
     }
 
     .filter-tabs-bottom label

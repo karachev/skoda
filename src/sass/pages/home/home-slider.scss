@@ -116,6 +116,7 @@
   }
 
   &-desc__text {
+    position: relative;
     font-family: $font-family-regular;
     max-width: 420px;
     margin: 0;
@@ -125,17 +126,20 @@
     font-weight: $font-weight-light;
     font-size: 16px;
     line-height: 26px;
-
+    overflow: hidden;
+    max-height: 260px;
     @include mq('desktop', 'max') {
       max-width: 365px;
       font-size: 14px;
       line-height: 24px;
+      max-height: 240px;
     }
 
     @include mq('tablet', 'max') {
       font-size: 13px;
       line-height: 17px;
       text-transform: initial;
+      max-height: 68px;
     }
   }
 
