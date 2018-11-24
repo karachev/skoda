@@ -5755,6 +5755,9 @@ $(function () {
       pass1: {
         required: true
       },
+      check2: {
+        required: true
+      },
       pass2: {
         required: true
       }
@@ -5771,6 +5774,9 @@ $(function () {
     rules: {
       form_name2: {
         required: true
+      },
+      check: {
+          required: true
       },
       pass3: {
         required: true

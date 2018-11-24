@@ -92,13 +92,6 @@
   outline: none;
 }
 
-.SumoSelect:focus > .CaptionCont,
-.SumoSelect:hover > .CaptionCont,
-.SumoSelect.open > .CaptionCont {
-  box-shadow: 0 0 2px #7799D0;
-  border-color: #7799D0;
-}
-
 .SumoSelect > .CaptionCont {
   position: relative;
   min-height: 44px;
@@ -360,8 +353,6 @@
 }
 
 .SumoSelect > .optWrapper.multiple.okCancelInMulti > .MultiControls > p:focus {
-  box-shadow: 0 0 2px #a1c0e4;
-  border-color: #a1c0e4;
   outline: none;
   background-color: #a1c0e4;
 }

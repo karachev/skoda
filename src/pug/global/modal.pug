@@ -14,7 +14,7 @@
             input.modal__input(type="password", name="pass3", placeholder="Пароль")
             label Пароль
         label.checkbox
-            input.checkbox__input(type='checkbox')
+            input.checkbox__input(type='checkbox', name="check")
             span.checkbox__label Запомнить меня
         a(href="#").modal__link Забыл пароль
         button.btn.btn_primary.btn_uppercase(type="submit") Вход на портал
@@ -51,7 +51,7 @@
             input.modal__input(id="pass2", type="password", name="pass2",equalto="#pass1", placeholder="Повторите пароль")
             label Повторите пароль
         label.checkbox
-            input.checkbox__input(type='checkbox')
+            input.checkbox__input(type='checkbox', name="check2")
             span.checkbox__label Даю согласие на
                 a(href="#")  обработку персональных данных
         button.btn.btn_primary.btn_uppercase(type="submit") Зарегистрироваться

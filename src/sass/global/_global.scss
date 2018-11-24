@@ -4,4 +4,17 @@
 @import "components/base";
 @import "components/typography";
 @import "components/buttons";
+
+.visually-hidden {
+  display: none;
+}
+input,
+button,
+textarea,
+.slick-slide,
+.SelectClass,
+.SumoSelect,
+option {
+  outline: none;
+}
 /* end global */
