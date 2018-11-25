@@ -19,6 +19,7 @@
     margin-top: 40px;
     width: 100%;
     text-transform: uppercase;
+    border: none;
     @include mq('tablet-small', 'max'){
       margin-top: 20px;
     }
@@ -185,7 +186,6 @@ input[type=checkbox] {
   top: 0;
   left: 0;
   transform: translate(-100%);
-  //transition: 0.5s all ease-in;
 
   .container {
     display: flex;
@@ -249,9 +249,6 @@ input[type=checkbox] {
     transform: translateY(-50%) rotate(-45deg);
   }
 }
-
-
-
 
 //modal-overlay
 

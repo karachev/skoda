@@ -5318,6 +5318,8 @@ option
     margin-top: 40px;
 
     text-transform: uppercase;
+
+    border: none;
 }
 
 .btn-close
