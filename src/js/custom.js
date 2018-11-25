@@ -23,30 +23,6 @@ $(function () {
     $yCord = $(this).data("y");
     $(this).find('span').css("top", $yCord + '%');
     $(this).find('span').css("left", $xCord + '%');
-
-    // $(this).find('span').on('click', function () {
-    //   $(".gallery-point__tooltip").removeClass('active');
-    //   $(".gallery-point__tooltip").css('display', 'none');
-    //   $xCord = $(element).data("x");
-    //   $yCord = $(element).data("y");
-    //   if (Number($xCord) < 55) {
-    //     $(element).find(".gallery-point__tooltip").css("transform", "translateX(6%)");
-    //     // $(element).find(".gallery-point__tooltip:before").css("transform", "scale(-1, 1);");
-    //     console.log(1);
-    //
-    //   }
-    //   if (Number($yCord) > 45) {
-    //     $(element).find(".gallery-point__tooltip").css("transform", "translateY(-106%)");
-    //     console.log(2);
-    //     // $(element).find(".gallery-point__tooltip:before").css("transform", "scale(1, -1);");
-    //   }
-    //   console.log($yCord + '%');
-    //   $(element).find(".gallery-point__tooltip").css("display", "flex");
-    //   $(element).find(".gallery-point__tooltip").addClass('active');
-    //   $(element).find(".gallery-point__tooltip").css("top", $yCord + '%');
-    //   $(element).find(".gallery-point__tooltip").css("left", $xCord + '%');
-    //   // $(element).find(".gallery-point__tooltip::before").css("transform", "scale(1, 1);");
-    // });
   });
   
   $('.modal-menu .icon-close').click(function (e) {
@@ -63,6 +39,7 @@ $(function () {
     loop: true,
     simulateTouch: true,
     mousewheelControl: true,
+    resizeReInit: true,
     pagination: {
       el: '.home-slider__pagination.swiper-pagination',
       clickable: 'true',
@@ -125,6 +102,7 @@ $(function () {
       simulateTouch: true,
       mousewheelControl: true,
       initialSlide: 1,
+      resizeReInit: true,
       pagination: {
         el: '.news__pagination.swiper-pagination',
         clickable: 'true',
@@ -141,6 +119,7 @@ $(function () {
       simulateTouch: true,
       mousewheelControl: true,
       initialSlide: 1,
+      resizeReInit: true,
       pagination: {
         el: '.reviews__pagination.swiper-pagination',
         clickable: 'true',
@@ -157,6 +136,7 @@ $(function () {
       simulateTouch: true,
       mousewheelControl: true,
       initialSlide: 2,
+      resizeReInit: true,
       pagination: {
         el: '.discussion__pagination.swiper-pagination',
         clickable: 'true',
@@ -281,6 +261,9 @@ $(function () {
       form_name2: "Введите email",
       pass3: "Введите пароль"
     }
+  });
+  $(window).resize(function(){
+    window.setTimeout('location.reload()', 500);
   });
 });
 
